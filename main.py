@@ -18,3 +18,4 @@ team_lineup = find_players_in_lineup("193827",dbu_season_ID,dbu_players_list)
 match_result = find_result("202852",dbu_season_ID)
 # RESET ALL PLAYER FINANCE JSON dept and deposit 
 reset_fines(dbu_players_list)
+print("TEST")
