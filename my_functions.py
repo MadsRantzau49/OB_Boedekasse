@@ -6,6 +6,8 @@ from datetime import datetime
 import os
 
 #List of players that are active in the bødekasse___________________________________________________________
+club_name = "&#216;ster Sundby B 32"
+
 
 #find the dbu names:
 def dbu_names():
@@ -72,7 +74,7 @@ def find_result(match_id,dbu_season_ID):
 
     for i,line in enumerate(lines):
         #checking which line number ØB is called
-        if ">&#216;ster Sundby B 32</span>" in line:
+        if club_name in line:
             #checking the file where they write ØB and then 2 lines above the location are located. 
             ØB_location = i -3
 
@@ -104,7 +106,7 @@ def find_result(match_id,dbu_season_ID):
 
             
         #check if the match are not played    
-        if "taberd&#248;mt" in line:
+        if "taberd&#248;mt" in line or "Oversidder" in line:
             match_not_played = True
 
     home_team_scored_goals = int(home_team_scored_goals)
@@ -150,7 +152,7 @@ def find_result(match_id,dbu_season_ID):
             print("ØB kunne ikke stille hold", LOSS,"kr,- bøde\n")
             return LOSS
         else:
-            print("Udehold udeblev: 0kr,- fine\n")
+            print("Udehold udeblev eller oversidder: 0kr,- fine\n")
             return 0
     else:
         print(total_fine,"kr,- bøde\n")
