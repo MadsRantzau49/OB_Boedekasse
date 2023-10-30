@@ -14,8 +14,6 @@ def dbu_names():
     dbu_name_list = []
     with open(os.path.dirname(__file__)+"/player_finance.json","r") as ap:
         data = json.load(ap)
-        data.decode('iso-8859-1')
-        print(data)
         for i in range(len(data["payingPlayers"])):
             dbu_name_list.append(data["payingPlayers"][i]["dbu_name"])
 

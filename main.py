@@ -7,6 +7,7 @@ dbu_season_ID = "409842"
 #list of all active players dbu name:
 dbu_players_list = dbu_names()
 
+print(dbu_players_list)
 #list of all active players mobilepay name:
 mobilepay_players_list = mobilepay_names()
 
@@ -23,4 +24,5 @@ for i in dbu_match_ID:
 
 #update players deposit:
 date = "15/08/2023"
-update_player_deposit(date,dbu_players_list)
+#update_player_deposit(date,dbu_players_list)
+
