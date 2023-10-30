@@ -19,3 +19,8 @@ for i in dbu_match_ID:
     match_result = find_result(i,dbu_season_ID)
     # RESET ALL PLAYER FINANCE JSON dept and deposit 
     reset_fines(dbu_players_list)
+
+
+#update players deposit:
+date = "15/08/2023"
+update_player_deposit(date,dbu_players_list)

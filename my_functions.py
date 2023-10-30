@@ -14,6 +14,8 @@ def dbu_names():
     dbu_name_list = []
     with open(os.path.dirname(__file__)+"/player_finance.json","r") as ap:
         data = json.load(ap)
+        data.decode('iso-8859-1')
+        print(data)
         for i in range(len(data["payingPlayers"])):
             dbu_name_list.append(data["payingPlayers"][i]["dbu_name"])
 
@@ -185,3 +187,25 @@ def reset_fines(players_list):
         ap.truncate()
 
 
+#Reads all transactions from the mobilepay box from the new season and update the deposit from each memeber
+def update_player_deposit(date,player_list):
+    with open(os.path.dirname(__file__)+"/trans.csv","r+") as ap:
+        mobilepay_box_data = csv.reader(ap)
+
+        #skip all old data:
+        date = datetime.strptime(date, "%d/%m/%Y")
+
+        for row in mobilepay_box_data:
+            # Extract the date string from the CSV row
+            transfer_date_str = row[0].split(',')[0].strip()
+
+            # Convert the date string to a datetime object
+            transaction_date = datetime.strptime(transfer_date_str, "%d/%m/%Y %H:%M")
+            
+            # Compare the transaction date with the threshold date
+            if transaction_date > transfer_date_str:
+
+                #add code for update players deposit
+                #make the array run through the mobilepay_box_data once and check for each row which player should be
+                #updated. Maybe do this in a external function
+                pass
