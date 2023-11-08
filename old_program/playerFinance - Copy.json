@@ -1,0 +1,137 @@
+{
+    "payingPlayers": [
+        {
+            "name": "Mads Rantzau Nielsen",
+            "Deposit": 0,
+            "Dept": 62,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Jannik L&#228;gel Johansson",
+            "Deposit": 0,
+            "Dept": 62,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Markus Bruun Jakobsen",
+            "Deposit": 20,
+            "Dept": 44,
+            "extra_fines": 20,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Johnni Bjerregaard",
+            "Deposit": 0,
+            "Dept": 0,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Andreas Ahrenfeldt Laursen",
+            "Deposit": 0,
+            "Dept": 44,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Phillip Wulff Kold",
+            "Deposit": 0,
+            "Dept": 44,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Lasse Christensen",
+            "Deposit": 0,
+            "Dept": 62,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Jakob Juul",
+            "Deposit": 20,
+            "Dept": 62,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Kristian Pedersen",
+            "Deposit": 30,
+            "Dept": 62,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Martin B&#248;gh Eliasen",
+            "Deposit": 50,
+            "Dept": 62,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Poul S&#248;nderup",
+            "Deposit": 20,
+            "Dept": 62,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Mathias Bundgaard Jensen",
+            "Deposit": 0,
+            "Dept": 0,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Thomas Werner",
+            "Deposit": 0,
+            "Dept": 0,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Mikkel Vangsted",
+            "Deposit": 0,
+            "Dept": 62,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Michael Buus",
+            "Deposit": 0,
+            "Dept": 44,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "David Nielsen",
+            "Deposit": 0,
+            "Dept": 18,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Nikolaj Ovesen",
+            "Deposit": 0,
+            "Dept": 62,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Rico Gertsen",
+            "Deposit": 0,
+            "Dept": 44,
+            "extra_fines": 0,
+            "extra_fines_comment": "last_year"
+        },
+        {
+            "name": "Andet",
+            "Deposit": -110.0,
+            "Dept": 0,
+            "extra_fines": 60,
+            "extra_fines_comment": "last_year"
+        }
+    ]
+}

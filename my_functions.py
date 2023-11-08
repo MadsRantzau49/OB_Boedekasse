@@ -6,8 +6,6 @@ from datetime import datetime
 import os
 
 #List of players that are active in the bødekasse___________________________________________________________
-club_name = "&#216;ster Sundby B 32"
-
 
 #find the dbu names:
 def dbu_names():
@@ -51,6 +49,110 @@ def find_players_in_lineup(match_id,dbu_season_ID,dbu_players_list):
             match_lineup.append(player_name)
     return match_lineup
 
+def check_if_player_is_in_lineup(match_id,dbu_season_ID,dbu_player):
+    #get the data from dbu.dk
+    team_lineup_html_request = find_team_lineup(match_id,dbu_season_ID)
+    
+    #The list with all players which play the specific match
+    if dbu_player in team_lineup_html_request:
+        return True
+    else:
+        return False 
+    
+
+def print_result(match_id,dbu_season_ID):
+    match_result_url = "https://www.dbu.dk/resultater/kamp/" + match_id + "_"+dbu_season_ID+ "_409842/kampinfo"
+    
+    #request html code from dbu.dk
+    match_result_html_request = requests.get(match_result_url)
+    match_result_html_request = match_result_html_request.text
+    lines = match_result_html_request.split('\n')
+
+    
+    ØB_location = 0
+    match_result_line = 0
+    match_not_played = False
+
+    home_team_scored_goals = 0
+    away_team_scored_goals = 0
+    
+    
+
+    for i,line in enumerate(lines):
+        #checking which line number ØB is called
+        if ">&#216;ster Sundby B 32</span>" in line:
+            #checking the file where they write ØB and then 2 lines above the location are located. 
+            ØB_location = i -1
+            #ØB location line
+            ØB_location = lines[ØB_location]
+            ØB_location = ØB_location.strip()
+            ØB_location = ØB_location.find("Hjemmehold")
+            if ØB_location != -1:
+                ØB_location = "Home"
+            else:
+                ØB_location = "Away"
+
+        #check in which line the result is on.
+        if "<label>Resultat</label>" in line:
+            #print('found at line:', num)
+            match_result_line = i +1
+            match_result_string = lines[match_result_line]
+            match_result_string = match_result_string.strip()
+            #removing the <span> in the beginningen of the string
+            match_result_string = match_result_string[6:]
+            #removing the </span> in the end of the string so now after this line there is only the result like 2-1 but as a string
+            match_result_string = match_result_string[:-7]
+            for i in range(0,len(match_result_string)):
+                if match_result_string[i] == "-":
+                    #home_team_scored_goals are everything before "-"
+                    home_team_scored_goals = match_result_string[:i]
+                    #away_team_scored_goals are everything after "-"
+                    away_team_scored_goals = match_result_string[i+1:]
+
+            
+        #check if the match are not played    
+        if "taberd&#248;mt" in line:
+            match_not_played = True
+
+    home_team_scored_goals = int(home_team_scored_goals)
+    away_team_scored_goals = int(away_team_scored_goals)
+    ØB_RESULT = ""
+    scoreboard = ""
+
+    #fine prices
+    WON = 10
+    DRAW = 20
+    LOSS = 30
+    GOAL_CONCEDED = 5
+    GOAL_SCORED = 2
+    total_fine = 0
+
+    if match_not_played:
+            øb_not_show_up = who_reported_cancellation(match_result_html_request,ØB_location)
+            if øb_not_show_up:
+                print("ØB kunne ikke stille hold\n")
+            else:
+                print("Udehold udeblev: 0kr,- fine\n")
+
+    if ØB_location == "Home":
+        print("ØB:", home_team_scored_goals , "\nAway:" , away_team_scored_goals)
+        if home_team_scored_goals > away_team_scored_goals:
+            total_fine = WON + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
+        elif home_team_scored_goals == away_team_scored_goals:
+            total_fine = DRAW + + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
+        else:
+            total_fine = LOSS + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
+               
+    else:
+        print("Home:", home_team_scored_goals , "\nØB:" , away_team_scored_goals)
+        if home_team_scored_goals < away_team_scored_goals:
+            total_fine = WON + (GOAL_SCORED * away_team_scored_goals) + (GOAL_CONCEDED * home_team_scored_goals) 
+        elif home_team_scored_goals == away_team_scored_goals:
+            total_fine = DRAW + (GOAL_SCORED * away_team_scored_goals) + (GOAL_CONCEDED * home_team_scored_goals) 
+        else:
+            total_fine = LOSS + (GOAL_SCORED * away_team_scored_goals) + (GOAL_CONCEDED * home_team_scored_goals) 
+
+    print(total_fine,"kr,- bøde\n")
     
 
 #Find the result from a match and return the fine for the current match.
@@ -74,9 +176,9 @@ def find_result(match_id,dbu_season_ID):
 
     for i,line in enumerate(lines):
         #checking which line number ØB is called
-        if club_name in line:
+        if ">&#216;ster Sundby B 32</span>" in line:
             #checking the file where they write ØB and then 2 lines above the location are located. 
-            ØB_location = i -3
+            ØB_location = i -1
 
             #ØB location line
             ØB_location = lines[ØB_location]
@@ -106,13 +208,11 @@ def find_result(match_id,dbu_season_ID):
 
             
         #check if the match are not played    
-        if "taberd&#248;mt" in line or "Oversidder" in line:
+        if "taberd&#248;mt" in line:
             match_not_played = True
 
     home_team_scored_goals = int(home_team_scored_goals)
     away_team_scored_goals = int(away_team_scored_goals)
-    ØB_RESULT = ""
-    scoreboard = ""
 
     #fine prices
     WON = 10
@@ -120,49 +220,33 @@ def find_result(match_id,dbu_season_ID):
     LOSS = 30
     GOAL_CONCEDED = 5
     GOAL_SCORED = 2
-    total_fine = 0
+    if match_not_played:
+        return 0
 
     if ØB_location == "Home":
-        print("ØB:", home_team_scored_goals , "\nAway:" , away_team_scored_goals)
         if home_team_scored_goals > away_team_scored_goals:
-            ØB_RESULT = "WIN"
-            total_fine = WON + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
+            return WON + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
         elif home_team_scored_goals == away_team_scored_goals:
-            ØB_RESULT = "DRAW"
-            total_fine = DRAW + + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
+            return DRAW + + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
         else:
-            ØB_RESULT = "LOSE"
-            total_fine = LOSS + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
+            return LOSS + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
                
     else:
-        print("Home:", home_team_scored_goals , "\nØB:" , away_team_scored_goals)
         if home_team_scored_goals < away_team_scored_goals:
-            ØB_RESULT = "WIN"
-            total_fine = WON + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
+            return WON + (GOAL_SCORED * away_team_scored_goals) + (GOAL_CONCEDED * home_team_scored_goals) 
         elif home_team_scored_goals == away_team_scored_goals:
-            ØB_RESULT = "DRAW"
-            total_fine = DRAW + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
+            return DRAW + (GOAL_SCORED * away_team_scored_goals) + (GOAL_CONCEDED * home_team_scored_goals) 
         else:
-            ØB_RESULT = "LOSE"
-            total_fine = LOSS + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
+            return LOSS + (GOAL_SCORED * away_team_scored_goals) + (GOAL_CONCEDED * home_team_scored_goals) 
 
-    if match_not_played:
-        øb_not_show_up = who_reported_cancellation(match_result_html_request,ØB_location)
-        if øb_not_show_up:
-            print("ØB kunne ikke stille hold", LOSS,"kr,- bøde\n")
-            return LOSS
-        else:
-            print("Udehold udeblev eller oversidder: 0kr,- fine\n")
-            return 0
-    else:
-        print(total_fine,"kr,- bøde\n")
-        return total_fine
 
+#check if øb cancel (I DONT USE IT RIGHT NOW)
 def who_reported_cancellation(match_result_html_request,ØB_location):   
     if ØB_location == "Home" and "Hjemmehold taberd&#248;mt" in match_result_html_request:
-        return True
+        #tilføj en bøde til hele holdet.
+        pass 
     else:
-        return False
+        return 0
 
 
 
@@ -183,6 +267,36 @@ def reset_fines(players_list):
 
         # Truncate the file to the current file position to remove any extra data. because the file add some weird ]} in the end. 
         ap.truncate()
+
+# Find player's dept and print fines.
+def find_dept(player,dbu_match_ID,dbu_season_ID):
+    fine = 0
+    for dbu_match_id in dbu_match_ID:
+        if (check_if_player_is_in_lineup(dbu_match_id,dbu_season_ID,player)):
+            fine += find_result(dbu_match_id,dbu_season_ID)
+            print_result(dbu_match_id,dbu_season_ID)
+    print(player,fine)    
+
+# update player's dept in JSON file
+def find_dept(player,dbu_match_ID,dbu_season_ID):
+    fine = 0
+    for dbu_match_id in dbu_match_ID:
+        if (check_if_player_is_in_lineup(dbu_match_id,dbu_season_ID,player)):
+            fine += find_result(dbu_match_id,dbu_season_ID)
+    update_dept(player,fine)        
+
+    
+#update player's dept in JSON file
+def update_dept(player,dept):
+    with open(os.path.dirname(__file__)+"/player_finance.json","r+") as ap:
+        data = json.load(ap)
+        all_players = dbu_names()
+        for i in range(len(all_players)):
+            if (data["payingPlayers"][i]["dbu_name"] == player):
+                data["payingPlayers"][i]["Dept"] = dept
+                ap.seek(0)  # Move the cursor to the beginning of the file
+                json.dump(data, ap, indent=4)
+                ap.truncate()  # Truncate the remaining data in the file
 
 
 #Reads all transactions from the mobilepay box from the new season and update the deposit from each memeber
