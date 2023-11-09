@@ -3,6 +3,7 @@ import json
 from termcolor import colored
 import csv
 from datetime import datetime
+import os
 
 
  #List of players that are active in the bødekasse
@@ -31,11 +32,11 @@ players = ["Mads Rantzau Nielsen",
 
 # RESET ALL PLAYER FINANCE JSON FILE + adding with active paying players list 
 #Reset everything exepct for extra fines for exampel yellow cars og taberdømt kamp osv. 
-with open("D:/code/bkasse_2023/playerFinance.json", "r") as pf:
+with open(os.path.dirname(__file__)+"/playerFinance.json", "r") as pf:
      data = json.load(pf)
 
 for i,naames in enumerate(players):
-    with open("D:/code/bkasse_2023/playerFinance.json","w") as pf:
+    with open(os.path.dirname(__file__)+"/playerFinance.json","w") as pf:
         data["payingPlayers"][i]["name"] = naames
         data["payingPlayers"][i]["Dept"] = 0
         data["payingPlayers"][i]["Deposit"] = 0
@@ -65,16 +66,16 @@ for a in matchindex:
      resultPage = result.text
 
      #Creates a file with all result info
-     f = open("D:/code/bkasse_2023/Result.txt", "w")
+     f = open(os.path.dirname(__file__)+"/Result.txt", "w")
      f.write(resultPage)
      f.close()
 
      #Creates a file with listed players
-     p = open("D:/code/bkasse_2023/players.txt", "w")
+     p = open(os.path.dirname(__file__)+"/players.txt", "w")
      p.write(teamPage)
      p.close()
      #Open the files and extract the above line of the result
-     r = open("D:/code/bkasse_2023/Result.txt", "r")   
+     r = open(os.path.dirname(__file__)+"/Result.txt", "r")   
 
 
      resultLine = 0
@@ -88,10 +89,10 @@ for a in matchindex:
                #print('found at line:', num)
                resultLine = num +1
      #print(resultLine)
-     line = open("D:/code/bkasse_2023/Result.txt", "r").readlines()[resultLine]
+     line = open(os.path.dirname(__file__)+"/Result.txt", "r").readlines()[resultLine]
 
      #print øb location line
-     OB_Loc = open("D:/code/bkasse_2023/Result.txt", "r").readlines()[OB_location]
+     OB_Loc = open(os.path.dirname(__file__)+"/Result.txt", "r").readlines()[OB_location]
 
      #check if the match are taberdømt
      taberdømt = False
@@ -102,10 +103,10 @@ for a in matchindex:
      if resultLine > 0 and taberdømt == False:
 
           #print(resultLine)
-          line = open("D:/code/bkasse_2023/Result.txt", "r").readlines()[resultLine]
+          line = open(os.path.dirname(__file__)+"/Result.txt", "r").readlines()[resultLine]
 
           #print øb location line
-          OB_Loc = open("D:/code/bkasse_2023/Result.txt", "r").readlines()[OB_location]
+          OB_Loc = open(os.path.dirname(__file__)+"/Result.txt", "r").readlines()[OB_location]
           OB_Loc_strip = OB_Loc.strip()
           OB_Loc_Key = OB_Loc_strip.find("Hjemmehold")
           if OB_Loc_Key != -1:
@@ -183,7 +184,7 @@ for a in matchindex:
                
 
           #Få det ind i en database
-          with open("D:/code/bkasse_2023/playerFinance.json", "r") as pf:
+          with open(os.path.dirname(__file__)+"/playerFinance.json", "r") as pf:
                data = json.load(pf)
 
           #Checking how many active paying members we have total
@@ -193,7 +194,7 @@ for a in matchindex:
           for i in playerslist:
                for c in range(0,members):
                     if i == data["payingPlayers"][c]["name"]:
-                         with open("D:/code/bkasse_2023/playerFinance.json","w") as pf:
+                         with open(os.path.dirname(__file__)+"/playerFinance.json","w") as pf:
                               data["payingPlayers"][c]["Dept"] = data["payingPlayers"][c]["Dept"] + fine
                               #print(data["payingPlayers"][c]["name"]," Dept are- ",data["payingPlayers"][c]["Dept"],"kr,-")                    
                               json.dump(data,pf, indent=4)
@@ -242,14 +243,14 @@ forbudteListe=["Jannik LÃ¤gel Johansson",
 
 
 
-with open("D:/code/bkasse_2023/playerFinance.json", "r") as pf:
+with open(os.path.dirname(__file__)+"/playerFinance.json", "r") as pf:
      data = json.load(pf)
 
 
 members = len(data["payingPlayers"])
 #reset dept so it wont overwrite.
 for v in range(0,members):
-    with open("D:/code/bkasse_2023/playerFinance.json", "w") as pft:
+    with open(os.path.dirname(__file__)+"/playerFinance.json", "w") as pft:
         data["payingPlayers"][v]["Deposit"] = 0
         json.dump(data,pft, indent=4)
 
@@ -260,7 +261,7 @@ restSum = 1260
 beerBudget = 0
 
 #open the trans file with all mobilepay transactions
-with open("D:/code/bkasse_2023/trans.csv", "r") as trans_file_csv:
+with open(os.path.dirname(__file__)+"/trans.csv", "r") as trans_file_csv:
      trans_reader_csv = csv.reader(trans_file_csv)
 
      threshold_date_str = "15/08/2023"
@@ -306,7 +307,7 @@ with open("D:/code/bkasse_2023/trans.csv", "r") as trans_file_csv:
 
                               #If mobilepay transfer is from a "fuckedplayer" player differents name from dbu and mobilepay
                               if fuckedName == data["payingPlayers"][a]["name"] and intPlayerPayed > 0:
-                                   with open("D:/code/bkasse_2023/playerFinance.json","w") as pf:
+                                   with open(os.path.dirname(__file__)+"/playerFinance.json","w") as pf:
                                         data["payingPlayers"][a]["Deposit"] = data["payingPlayers"][a]["Deposit"] + intPlayerPayed
                                         #print(data["payingPlayers"][a]["name"]," Have deposit- ",data["payingPlayers"][a]["Deposit"],"kr,-")                    
                                         json.dump(data,pf, indent=4)
@@ -314,7 +315,7 @@ with open("D:/code/bkasse_2023/trans.csv", "r") as trans_file_csv:
                                              
                               #If DBU name == mobilepay name                         
                               elif c == data["payingPlayers"][a]["name"] and intPlayerPayed > 0:
-                                   with open("D:/code/bkasse_2023/playerFinance.json","w") as pf:
+                                   with open(os.path.dirname(__file__)+"/playerFinance.json","w") as pf:
                                         data["payingPlayers"][a]["Deposit"] = data["payingPlayers"][a]["Deposit"] + intPlayerPayed
                                         #print(data["payingPlayers"][a]["name"]," Have deposit- ",data["payingPlayers"][a]["Deposit"],"kr,-")                    
                                         json.dump(data,pf, indent=4)
@@ -335,7 +336,7 @@ with open("D:/code/bkasse_2023/trans.csv", "r") as trans_file_csv:
      
 
 
-with open("D:/code/bkasse_2023/playerFinance.json", "r") as pf:
+with open(os.path.dirname(__file__)+"/playerFinance.json", "r") as pf:
      data = json.load(pf)
 
 members = len(data["payingPlayers"])
@@ -349,7 +350,7 @@ for count in range(0,members):
 overAllSum = restSum - membersSum 
 
 #Print the rest to the account "andet"
-with open("D:/code/bkasse_2023/playerFinance.json" , "w") as pf:
+with open(os.path.dirname(__file__)+"/playerFinance.json" , "w") as pf:
      for i,g in enumerate(players):
           if g == "Andet":
                data["payingPlayers"][i]["Deposit"] = overAllSum

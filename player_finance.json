@@ -3,7 +3,7 @@
         {
             "dbu_name": "Mads Rantzau Nielsen",
             "mobilepay_name": "Mads Rantzau Nielsen",
-            "Deposit": 0,
+            "Deposit": 523,
             "Dept": 221,
             "extra_fines": {
                 "red card": 0,
@@ -13,8 +13,8 @@
         },
         {
             "dbu_name": "Jannik L&#228;gel Johansson",
-            "mobilepay_name": "Mads Rantzau Nielsen",
-            "Deposit": 0,
+            "mobilepay_name": "Jannik L",
+            "Deposit": 248,
             "Dept": 262,
             "extra_fines": {
                 "yellow card": 0,
@@ -25,7 +25,7 @@
         {
             "dbu_name": "Markus Bruun Jakobsen",
             "mobilepay_name": "Markus Bruun Jakobsen",
-            "Deposit": 0,
+            "Deposit": 227,
             "Dept": 180,
             "extra_fines": {
                 "yellow card": 0,
@@ -36,7 +36,7 @@
         {
             "dbu_name": "Andreas Ahrenfeldt Laursen",
             "mobilepay_name": "Andreas Ahrenfeldt Laursen",
-            "Deposit": 0,
+            "Deposit": 200,
             "Dept": 200,
             "extra_fines": {
                 "yellow card": 0,
@@ -46,8 +46,8 @@
         },
         {
             "dbu_name": "Phillip Wulff Kold",
-            "mobilepay_name": "Phillip Wulff Kold",
-            "Deposit": 0,
+            "mobilepay_name": "Phillip Wulff",
+            "Deposit": 226,
             "Dept": 176,
             "extra_fines": {
                 "yellow card": 0,
@@ -58,7 +58,7 @@
         {
             "dbu_name": "Lasse Christensen",
             "mobilepay_name": "Lasse Christensen",
-            "Deposit": 0,
+            "Deposit": 198,
             "Dept": 198,
             "extra_fines": {
                 "yellow card": 0,
@@ -68,8 +68,8 @@
         },
         {
             "dbu_name": "Jakob Juul",
-            "mobilepay_name": "Jakob Juul",
-            "Deposit": 0,
+            "mobilepay_name": "Jakob Sejer Juul",
+            "Deposit": 20,
             "Dept": 171,
             "extra_fines": {
                 "yellow card": 0,
@@ -80,7 +80,7 @@
         {
             "dbu_name": "Kristian Pedersen",
             "mobilepay_name": "Kristian Pedersen",
-            "Deposit": 0,
+            "Deposit": 226,
             "Dept": 226,
             "extra_fines": {
                 "yellow card": 0,
@@ -90,8 +90,8 @@
         },
         {
             "dbu_name": "Martin B&#248;gh Eliasen",
-            "mobilepay_name": "Martin B&#248;gh Eliasen",
-            "Deposit": 0,
+            "mobilepay_name": "Martin B",
+            "Deposit": 284,
             "Dept": 234,
             "extra_fines": {
                 "yellow card": 0,
@@ -101,8 +101,8 @@
         },
         {
             "dbu_name": "Poul S&#248;nderup",
-            "mobilepay_name": "Poul S&#248;nderup",
-            "Deposit": 0,
+            "mobilepay_name": "Poul Lynggaard",
+            "Deposit": 282,
             "Dept": 262,
             "extra_fines": {
                 "yellow card": 0,
@@ -113,7 +113,7 @@
         {
             "dbu_name": "Mathias Bundgaard Jensen",
             "mobilepay_name": "Mathias Bundgaard Jensen",
-            "Deposit": 0,
+            "Deposit": 133,
             "Dept": 133,
             "extra_fines": {
                 "yellow card": 0,
@@ -124,7 +124,7 @@
         {
             "dbu_name": "Mikkel Vangsted",
             "mobilepay_name": "Mikkel Vangsted",
-            "Deposit": 0,
+            "Deposit": 185,
             "Dept": 185,
             "extra_fines": {
                 "yellow card": 0,
@@ -135,7 +135,7 @@
         {
             "dbu_name": "Michael Buus",
             "mobilepay_name": "Michael Buus",
-            "Deposit": 0,
+            "Deposit": 80,
             "Dept": 180,
             "extra_fines": {
                 "yellow card": 0,
@@ -145,8 +145,8 @@
         },
         {
             "dbu_name": "David Nielsen",
-            "mobilepay_name": "David Nielsen",
-            "Deposit": 0,
+            "mobilepay_name": "AJ",
+            "Deposit": 231,
             "Dept": 181,
             "extra_fines": {
                 "yellow card": 0,
@@ -157,7 +157,7 @@
         {
             "dbu_name": "Nikolaj Ovesen",
             "mobilepay_name": "Nikolaj Ovesen",
-            "Deposit": 0,
+            "Deposit": 126,
             "Dept": 126,
             "extra_fines": {
                 "yellow card": 0,
@@ -167,8 +167,8 @@
         },
         {
             "dbu_name": "Rico Gertsen",
-            "mobilepay_name": "Rico Gertsen",
-            "Deposit": 0,
+            "mobilepay_name": "Rico S",
+            "Deposit": 115,
             "Dept": 159,
             "extra_fines": {
                 "yellow card": 0,

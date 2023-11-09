@@ -1,16 +1,24 @@
 
 
 <!DOCTYPE html>
-<html class="no-js" lang="da">
+<html class="no-js stylemode_old " lang="da">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-        <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" data-culture="DA" data-tcf-v2-enabled="true" data-tcf-global-scope="false" type="text/javascript"></script>
+        <script id="CookieConsent" type="text/javascript" src="https://policy.app.cookieinformation.com/uc.js" data-culture="DA" data-tcf-v2-enabled="true" data-tcf-version="2.2"></script>
             <!-- Google Tag Manager -->
         <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NVH39P4');</script>
+            window.addEventListener('CookieInformationConsentGiven', function (event) {
+                if (CookieInformation.getConsentGivenFor('cookie_cat_statistic')) {
+                    (function (w, d, s, l, i) {
+                        w[l] = w[l] || []; w[l].push({
+                            'gtm.start':
+                                new Date().getTime(), event: 'gtm.js'
+                        }); var f = d.getElementsByTagName(s)[0],
+                            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                    })(window, document, 'script', 'dataLayer', 'GTM-NVH39P4');
+                }
+            });
+        </script>
         <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -45,6 +53,9 @@
             <meta property="og:image:width" content="1200" />
             <meta itemprop="image" content="https://mit.dbu.dk/Public/MatchImage.aspx?matchid=202864&poolid=409842" />
             <meta name="twitter:image" content="https://mit.dbu.dk/Public/MatchImage.aspx?matchid=202864&poolid=409842" />
+            <meta property="og:image" content="https://www.dbu.dk/Content/Gfx/dbu-some-default.png" />
+            <meta itemprop="image" content="https://www.dbu.dk/Content/Gfx/dbu-some-default.png" />
+            <meta name="twitter:image" content="https://www.dbu.dk/Content/Gfx/dbu-some-default.png" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Stillinger og resultater" />
@@ -74,8 +85,8 @@
     </script>
 
 
-    <link href="/DependencyHandler.axd?s=L0Nzcy9MYXlvdXQuY3NzOw&amp;t=Css&amp;cdv=712566119" type="text/css" rel="stylesheet"/>
-    <script src="/DependencyHandler.axd?s=L1NjcmlwdHMvc2VhcmNoQm94LmpzOy9zY3JpcHRzL3BsdWdpbnMvanF1ZXJ5LTMuMy4xLm1pbi5qczsvU2NyaXB0cy9hZHMuanM7&amp;t=Javascript&amp;cdv=712566119" defer="defer" type="text/javascript"></script><script src="https://unpkg.com/scroll-into-view-if-needed@3.0.3/dist/index.cjs" defer="defer" type="text/javascript"></script><script src="/DependencyHandler.axd?s=L1NjcmlwdHMvbmF2aWdhdGlvbi5qczsvU2NyaXB0cy9wbHVnaW5zL2ltYWdlTWFwUmVzaXplci5taW4uanM7L1NjcmlwdHMvY29yZS5qczsvU2NyaXB0cy9sb2dpbi5qczsvU2NyaXB0cy9uYXYyLmpzOy9TY3JpcHRzL3BsdWdpbnMvc2Nyb2xsVG8vc2Nyb2xsVG8uanM7L1NjcmlwdHMvcGx1Z2lucy9zY3JvbGxUby9zY3JvbGxUb0VsZW1lbnRzLmpzOy9TY3JpcHRzL3Njcm9sbFRhYmxlLmpzOy9TY3JpcHRzL2N1c3RvbUZpZWxkVmFsaWRhdGlvbi9jdXN0b21GaWVsZFZhbGlkYXRpb24uanM7L1NjcmlwdHMvdmVydGljYWxOYXZpZ2F0aW9uLmpzOy9TY3JpcHRzL3BsdWdpbnMvSHlwaGVuYXRvci5qczsvU2NyaXB0cy9wbHVnaW5zL2pxdWVyeS5tYXNrLmpzOy9TY3JpcHRzL2RidWRhdGF0YWJsZXMuanM7L1NjcmlwdHMvc3IuanM7&amp;t=Javascript&amp;cdv=712566119" defer="defer" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/zebra_tooltips@2.3.0/dist/zebra_tooltips.min.js" defer="defer" type="text/javascript"></script><script src="https://tags.adnuntius.com/behrentz/MX2Z2VgxJ.prod.js" async="async" type="text/javascript"></script><script src="/DependencyHandler.axd?s=L3NjcmlwdHMvcGx1Z2lucy9zbGltc3kvbHMuYmdzZXQubWluLmpzOy9zY3JpcHRzL3BsdWdpbnMvc2xpbXN5L2xhenlzaXplcy5taW4uanM7L3NjcmlwdHMvcGx1Z2lucy9zbGltc3kvcGljdHVyZWZpbGwubWluLmpzOw&amp;t=Javascript&amp;cdv=712566119" async="async" type="text/javascript"></script>
+    <link href="/DependencyHandler.axd?s=L2Nzcy96ZWJyYVRvb2xUaXBzLm1pbi5jc3M7L0Nzcy9MYXlvdXQuY3NzOw&amp;t=Css&amp;cdv=712566126" type="text/css" rel="stylesheet"/>
+    <script src="/DependencyHandler.axd?s=L3NjcmlwdHMvcGx1Z2lucy9qcXVlcnktMy4zLjEubWluLmpzOy9TY3JpcHRzL3NlYXJjaEJveC5qczsvU2NyaXB0cy9uYXZpZ2F0aW9uLmpzOy9TY3JpcHRzL3BsdWdpbnMvaW1hZ2VNYXBSZXNpemVyLm1pbi5qczsvU2NyaXB0cy96ZWJyYVRvb2x0aXBzLmpzOy9TY3JpcHRzL2NvcmUuanM7L1NjcmlwdHMvbG9naW4uanM7L1NjcmlwdHMvbmF2Mi5qczsvU2NyaXB0cy9wbHVnaW5zL3Njcm9sbFRvL3Njcm9sbFRvLmpzOy9TY3JpcHRzL3BsdWdpbnMvc2Nyb2xsVG8vc2Nyb2xsVG9FbGVtZW50cy5qczsvU2NyaXB0cy9zY3JvbGxUYWJsZS5qczsvU2NyaXB0cy9jdXN0b21GaWVsZFZhbGlkYXRpb24vY3VzdG9tRmllbGRWYWxpZGF0aW9uLmpzOy9TY3JpcHRzL3ZlcnRpY2FsTmF2aWdhdGlvbi5qczsvU2NyaXB0cy9wbHVnaW5zL0h5cGhlbmF0b3IuanM7L1NjcmlwdHMvcGx1Z2lucy9qcXVlcnkubWFzay5qczsvU2NyaXB0cy9kYnVkYXRhdGFibGVzLmpzOy9TY3JpcHRzL3NyLmpzOy9TY3JpcHRzL2Fkcy5qczs&amp;t=Javascript&amp;cdv=712566126" defer="defer" type="text/javascript"></script><script src="/DependencyHandler.axd?s=L3NjcmlwdHMvcGx1Z2lucy9zbGltc3kvbHMuYmdzZXQubWluLmpzOy9zY3JpcHRzL3BsdWdpbnMvc2xpbXN5L2xhenlzaXplcy5taW4uanM7L3NjcmlwdHMvcGx1Z2lucy9zbGltc3kvcGljdHVyZWZpbGwubWluLmpzOw&amp;t=Javascript&amp;cdv=712566126" async="async" type="text/javascript"></script>
 
 
         <script>
@@ -92,87 +103,93 @@
 
 
 <script>
-    const loadTcfStub = () => {
-            !(function () {
-                var e = function () {
-                    var e,
-                        t = "__tcfapiLocator",
-                        a = [],
-                        n = window;
-                    for (; n;) {
-                        try {
-                            if (n.frames[t]) {
-                                e = n;
-                                break;
-                            }
-                        } catch (e) { }
-                        if (n === window.top) break;
-                        n = n.parent;
-                    }
-                    e ||
-                        (!(function e() {
-                            var a = n.document,
-                                r = !!n.frames[t];
-                            if (!r)
-                                if (a.body) {
-                                    var i = a.createElement("iframe");
-                                    (i.style.cssText = "display:none"),
-                                        (i.name = t),
-                                        a.body.appendChild(i);
-                                } else setTimeout(e, 5);
-                            return !r;
-                        })(),
-                            (n.__tcfapi = function () {
-                                for (var e, t = arguments.length, n = new Array(t), r = 0; r < t; r++)
-                                    n[r] = arguments[r];
-                                if (!n.length) return a;
-                                if ("setGdprApplies" === n[0])
-                                    n.length > 3 &&
-                                        2 === parseInt(n[1], 10) &&
-                                        "boolean" == typeof n[3] &&
-                                        ((e = n[3]), "function" == typeof n[2] && n[2]("set", !0));
-                                else if ("ping" === n[0]) {
-                                    var i = { gdprApplies: e, cmpLoaded: !1, cmpStatus: "stub" };
-                                    "function" == typeof n[2] && n[2](i);
-                                } else a.push(n);
-                            }),
-                            n.addEventListener(
-                                "message",
-                                function (e) {
-                                    var t = "string" == typeof e.data,
-                                        a = {};
-                                    try {
-                                        a = t ? JSON.parse(e.data) : e.data;
-                                    } catch (e) { }
-                                    var n = a.__tcfapiCall;
-                                    n &&
-                                        window.__tcfapi(
-                                            n.command,
-                                            n.version,
-                                            function (a, r) {
-                                                var i = {
-                                                    __tcfapiReturn: {
-                                                        returnValue: a,
-                                                        success: r,
-                                                        callId: n.callId,
-                                                    },
-                                                };
-                                                t && (i = JSON.stringify(i)), e.source.postMessage(i, "*");
-                                            },
-                                            n.parameter
-                                        );
-                                },
-                                !1
-                            ));
-                };
-                "undefined" != typeof module ? (module.exports = e) : e();
-            })();
-     };
-        loadTcfStub();
-</script> 
+
+    window.addEventListener('CookieInformationConsentGiven', function (event) {
+        if (CookieInformation.getConsentGivenFor('cookie_cat_marketing')) {
+
+            const loadTcfStub = () => {
+                !(function () {
+                    var e = function () {
+                        var e,
+                            t = "__tcfapiLocator",
+                            a = [],
+                            n = window;
+                        for (; n;) {
+                            try {
+                                if (n.frames[t]) {
+                                    e = n;
+                                    break;
+                                }
+                            } catch (e) { }
+                            if (n === window.top) break;
+                            n = n.parent;
+                        }
+                        e ||
+                            (!(function e() {
+                                var a = n.document,
+                                    r = !!n.frames[t];
+                                if (!r)
+                                    if (a.body) {
+                                        var i = a.createElement("iframe");
+                                        (i.style.cssText = "display:none"),
+                                            (i.name = t),
+                                            a.body.appendChild(i);
+                                    } else setTimeout(e, 5);
+                                return !r;
+                            })(),
+                                (n.__tcfapi = function () {
+                                    for (var e, t = arguments.length, n = new Array(t), r = 0; r < t; r++)
+                                        n[r] = arguments[r];
+                                    if (!n.length) return a;
+                                    if ("setGdprApplies" === n[0])
+                                        n.length > 3 &&
+                                            2 === parseInt(n[1], 10) &&
+                                            "boolean" == typeof n[3] &&
+                                            ((e = n[3]), "function" == typeof n[2] && n[2]("set", !0));
+                                    else if ("ping" === n[0]) {
+                                        var i = { gdprApplies: e, cmpLoaded: !1, cmpStatus: "stub" };
+                                        "function" == typeof n[2] && n[2](i);
+                                    } else a.push(n);
+                                }),
+                                n.addEventListener(
+                                    "message",
+                                    function (e) {
+                                        var t = "string" == typeof e.data,
+                                            a = {};
+                                        try {
+                                            a = t ? JSON.parse(e.data) : e.data;
+                                        } catch (e) { }
+                                        var n = a.__tcfapiCall;
+                                        n &&
+                                            window.__tcfapi(
+                                                n.command,
+                                                n.version,
+                                                function (a, r) {
+                                                    var i = {
+                                                        __tcfapiReturn: {
+                                                            returnValue: a,
+                                                            success: r,
+                                                            callId: n.callId,
+                                                        },
+                                                    };
+                                                    t && (i = JSON.stringify(i)), e.source.postMessage(i, "*");
+                                                },
+                                                n.parameter
+                                            );
+                                    },
+                                    !1
+                                ));
+                    };
+                    "undefined" != typeof module ? (module.exports = e) : e();
+                })();
+            };
+            loadTcfStub();
+        }
+    }, false);
+</script>
 
 
-    <link href="https://cdn.jsdelivr.net/npm/zebra_tooltips@2.1.0/dist/css/default/zebra_tooltips.min.css" rel="stylesheet"/>
+
 </head>
 <body data-pageid="20730" data-main-nav="closed"  class="   " >
         <!-- Google Tag Manager (noscript) -->
@@ -280,6 +297,8 @@
     
 
 
+
+
 <div class="sr--layout">
     <div data-print="false" class="ad--container ad--container--bm-lb1-dis">
 
@@ -317,8 +336,7 @@
             </div>
             <div class="last-container" data-print="true">
                 <div class="search-box-wrap" data-print="false">
-
-                        
+    
 <section class="search-box">
 
     <div class="search-box__options" role="radiogroup" aria-label="Kampsøgning">
@@ -351,7 +369,7 @@
         </label>
     </div>
     <div class="search-box__search-container">
-        <form action="/resultater/hold/523333_411988/karantaener" class="search-box__input-form" data-search-box-state="closed" enctype="multipart/form-data" method="post">        <div class="form-container">
+        <form action="/resultater/Klub/2085" class="search-box__input-form" data-search-box-state="closed" enctype="multipart/form-data" method="post">        <div class="form-container">
             <div>
                 <label>
                     Vælg forbund eller union
@@ -458,7 +476,7 @@
 
 
         </div>
-<input name="ufprt" type="hidden" value="78661372D0FC1F87B53A61B02446CFAE2ED1DB90853143D96685104AE3B4B3328E8537C45EE386B40032155EA78336FE1D2DFA41C88B6256B708E02595F0CCE79FFFEB9903AE9859ED2E1D47D2D554DBB029652BADAEDAD3A14A0B2D767E738C5255E122C3442C468F754723EE69FD6D29AD714A2191D370B26A80A1F306A26094538BBC13A752B8D257A84B907A72CEA8892C2113B3C783742FFB8BBA39D27D" /></form>
+<input name="ufprt" type="hidden" value="5FD486F99F3CF1243C2DA3AEB7DB7481030182B1E470F08D03D2864BAA07BAD6B4A08873B4A164BB14F4606FD3D57EDB8330ED088B5E50A995541BFA51559AAB3776F67D5B70A94D103960C6B5CD8065D62476047423DE8F6CA403EB546FE24079EC075198F1E640C6E8718180F0EA90697AFF4EEF0484E85AF542B0D1B2FCF77501A47CBE1F0D45C4D6FD9337F6F0E1C62A167DA59AA2F5F0E212D59DCB6687" /></form>
 
 
         <form action="/resultater/klubsoeg/" method="GET" class="search-box__search-form is-visible">
@@ -484,9 +502,7 @@
 
 
 </section>
-
-
-                </div>
+                                    </div>
                 <div data-print="false" class="ad--container ad--container--bm-mob1"><div id="bm-mob1"></div></div>
                             <div class="sr--header">
                 <h2>Oversidder - &#216;ster Sundby B 32 //</h2>
@@ -560,6 +576,7 @@
         </div>
     </div>
 </div>
+
 
 </main>
 
@@ -730,7 +747,16 @@
     
 
 
+    <script>
+        window.addEventListener('CookieInformationConsentGiven', function (event) {
+            if (CookieInformation.getConsentGivenFor('cookie_cat_marketing')) {
+                let script = document.createElement('script');
+                script.src =
+                    "https://tags.adnuntius.com/behrentz/MX2Z2VgxJ.prod.js";
+                document.head.appendChild(script)
+            }
+        }, false);
+    </script>
 
-    
 </body>
 </html>

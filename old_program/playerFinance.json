@@ -2,15 +2,15 @@
     "payingPlayers": [
         {
             "name": "Mads Rantzau Nielsen",
-            "Deposit": 0,
-            "Dept": 202,
+            "Deposit": 358,
+            "Dept": 221,
             "extra_fines": 0,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Jannik L&#228;gel Johansson",
             "Deposit": 248,
-            "Dept": 218,
+            "Dept": 262,
             "extra_fines": 123,
             "extra_fines_comment": [
                 "last_year___150",
@@ -19,8 +19,8 @@
         },
         {
             "name": "Markus Bruun Jakobsen",
-            "Deposit": 127,
-            "Dept": 136,
+            "Deposit": 227,
+            "Dept": 180,
             "extra_fines": 47,
             "extra_fines_comment": [
                 "last_year___20",
@@ -36,57 +36,57 @@
         },
         {
             "name": "Andreas Ahrenfeldt Laursen",
-            "Deposit": 128,
+            "Deposit": 200,
             "Dept": 200,
             "extra_fines": 0,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Phillip Wulff Kold",
-            "Deposit": 50,
-            "Dept": 151,
+            "Deposit": 226,
+            "Dept": 176,
             "extra_fines": 50,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Lasse Christensen",
-            "Deposit": 110,
-            "Dept": 154,
+            "Deposit": 198,
+            "Dept": 198,
             "extra_fines": 0,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Jakob Juul",
             "Deposit": 20,
-            "Dept": 127,
+            "Dept": 171,
             "extra_fines": 20,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Kristian Pedersen",
-            "Deposit": 89,
-            "Dept": 182,
+            "Deposit": 226,
+            "Dept": 226,
             "extra_fines": 0,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Martin B&#248;gh Eliasen",
-            "Deposit": 50,
-            "Dept": 190,
+            "Deposit": 265,
+            "Dept": 234,
             "extra_fines": 50,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Poul S&#248;nderup",
-            "Deposit": 145,
-            "Dept": 218,
+            "Deposit": 282,
+            "Dept": 262,
             "extra_fines": 20,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Mathias Bundgaard Jensen",
-            "Deposit": 36,
-            "Dept": 108,
+            "Deposit": 133,
+            "Dept": 133,
             "extra_fines": 0,
             "extra_fines_comment": "last_year"
         },
@@ -99,28 +99,28 @@
         },
         {
             "name": "Mikkel Vangsted",
-            "Deposit": 0,
-            "Dept": 166,
+            "Deposit": 185,
+            "Dept": 185,
             "extra_fines": 0,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Michael Buus",
             "Deposit": 80,
-            "Dept": 136,
+            "Dept": 180,
             "extra_fines": 80,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "David Nielsen",
             "Deposit": 0,
-            "Dept": 137,
+            "Dept": 181,
             "extra_fines": 0,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Nikolaj Ovesen",
-            "Deposit": 0,
+            "Deposit": 126,
             "Dept": 126,
             "extra_fines": 0,
             "extra_fines_comment": "last_year"
@@ -128,13 +128,13 @@
         {
             "name": "Rico Gertsen",
             "Deposit": 0,
-            "Dept": 115,
+            "Dept": 159,
             "extra_fines": 0,
             "extra_fines_comment": "last_year"
         },
         {
             "name": "Andet",
-            "Deposit": 207.0,
+            "Deposit": -1484.0,
             "Dept": 0,
             "extra_fines": 778,
             "extra_fines_comment": "last_year"
