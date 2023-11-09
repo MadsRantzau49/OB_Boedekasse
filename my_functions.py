@@ -357,3 +357,12 @@ def total_deposit_f():
         for i in range(len(members)):
             total_deposit += data["payingPlayers"][i]["Dept"]
         return total_deposit
+
+
+def player_remain_to_pay(player_id):
+    with open(os.path.dirname(__file__)+"/player_finance.json","r+") as ap:
+        data = json.load(ap)
+        dept = data["payingPlayers"][player_id]["Dept"]
+        deposit = data["payingPlayers"][player_id]["Deposit"]
+        #extra_fine = data["payingPlayers"][player_id]["extra_fines"]
+        return deposit - dept #- extra_fine
