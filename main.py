@@ -76,4 +76,4 @@ def index():
 @app.route('/kampe')
 def matches():
     return "OB MOD VEJGAARD"
-app.run(host="0.0.0.0",port="5001",debug=True)
+app.run()
