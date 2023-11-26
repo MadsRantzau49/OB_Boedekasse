@@ -43,12 +43,20 @@ for name in mobilepay_players_list:
 
 
 #Print total revenue
-total_revenue = total_revenue_f()
+#total_revenue = total_revenue_f()
 
 #Print current value
-total_deposit = total_deposit_f()
+#total_deposit = total_deposit_f()
 
 #player still need to pay x kr,-
 for i,name in enumerate(mobilepay_players_list):
     player_need_to_pay = player_remain_to_pay(i)
-    print(player_need_to_pay, name)
+    #print(player_need_to_pay, name)
+
+economy_list = []
+player = dbu_names()
+for name in range(len(player)):
+    dept = player_remain_to_pay(name)
+    economy_list.append(dept)
+
+print(economy_list)
