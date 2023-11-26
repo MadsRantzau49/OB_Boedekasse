@@ -140,6 +140,8 @@ if __name__ == '__main__':
 #total_deposit = total_deposit_f()
 
 #player still need to pay x kr,-
-for i,name in enumerate(mobilepay_players_list):
-    player_need_to_pay = player_remain_to_pay(i)
-    print(player_need_to_pay, name)
+#for i,name in enumerate(mobilepay_players_list):
+ #   player_need_to_pay = player_remain_to_pay(i)
+  #  print(player_need_to_pay, name)
+
+
