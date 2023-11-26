@@ -19,10 +19,10 @@
 		<p><input type = "submit" value = "tjek" /></p>
 		
 	</form>
-
+	{% if len_active_games %}
+	
 	<h4>Spiller: {{player}}</h4>
 	<p> Har spillet følgende kampe:</p>
-	{% if len_active_games %}
 	{% for i in range(len_active_games) %}
 	<p><a href="https://www.dbu.dk/resultater/kamp/{{active_list[i]}}_{{dbu_season_ID}}/holdopstillinger">{{active_list[i]}}: Bøde= {{fine_list[i]}}</a></<p>
 	
