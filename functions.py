@@ -1,6 +1,5 @@
 import requests
 import json
-from termcolor import colored
 import csv
 from datetime import datetime
 import os
@@ -76,6 +75,17 @@ def find_players_in_lineup(match_id,dbu_season_ID,dbu_players_list):
     return match_lineup
 
 
+#find one specific player
+def find_player_in_lineup(match_id,dbu_season_ID,dbu_player):
+    #get the data from dbu.dk
+    team_lineup_html_request = find_team_lineup(match_id,dbu_season_ID)
+    
+    #The list with all players which play the specific match
+    if dbu_player in team_lineup_html_request:
+        return 1
+    else:
+        return 0
+
 def print_result(match_id,dbu_season_ID):
     match_result_url = "https://www.dbu.dk/resultater/kamp/" + match_id + "_"+dbu_season_ID+ "_409842/kampinfo"
     
@@ -132,44 +142,22 @@ def print_result(match_id,dbu_season_ID):
 
     home_team_scored_goals = int(home_team_scored_goals)
     away_team_scored_goals = int(away_team_scored_goals)
-    ØB_RESULT = ""
-    scoreboard = ""
-
-    #fine prices
-    WON = 10
-    DRAW = 20
-    LOSS = 30
-    GOAL_CONCEDED = 5
-    GOAL_SCORED = 2
-    total_fine = 0
 
     if match_not_played:
             øb_not_show_up = who_reported_cancellation(match_result_html_request,ØB_location)
             if øb_not_show_up:
-                print("ØB kunne ikke stille hold\n")
+                match_not_played = [2,"ØB","Kunne ikke stille hold"]
+                return match_not_played
             else:
-                print("Udehold udeblev: 0kr,- fine\n")
-
+                match_not_played = [2,"Udehold","Kunne ikke stille hold"]
+                return match_not_played
     if ØB_location == "Home":
-        print("ØB:", home_team_scored_goals , "\nAway:" , away_team_scored_goals)
-        if home_team_scored_goals > away_team_scored_goals:
-            total_fine = WON + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
-        elif home_team_scored_goals == away_team_scored_goals:
-            total_fine = DRAW + + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
-        else:
-            total_fine = LOSS + (GOAL_SCORED * home_team_scored_goals) + (GOAL_CONCEDED * away_team_scored_goals) 
-               
+        match_result_list = [0,home_team_scored_goals,away_team_scored_goals]
     else:
-        print("Home:", home_team_scored_goals , "\nØB:" , away_team_scored_goals)
-        if home_team_scored_goals < away_team_scored_goals:
-            total_fine = WON + (GOAL_SCORED * away_team_scored_goals) + (GOAL_CONCEDED * home_team_scored_goals) 
-        elif home_team_scored_goals == away_team_scored_goals:
-            total_fine = DRAW + (GOAL_SCORED * away_team_scored_goals) + (GOAL_CONCEDED * home_team_scored_goals) 
-        else:
-            total_fine = LOSS + (GOAL_SCORED * away_team_scored_goals) + (GOAL_CONCEDED * home_team_scored_goals) 
+        match_result_list = [1,home_team_scored_goals,away_team_scored_goals]
 
-    print(total_fine,"kr,- bøde\n")
-    
+    return match_result_list
+
 
 #Find the result from a match and return the fine for the current match.
 def find_result(match_id,dbu_season_ID):
