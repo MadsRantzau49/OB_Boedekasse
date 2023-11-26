@@ -1,6 +1,5 @@
 import requests
 import json
-from termcolor import colored
 import csv
 from datetime import datetime
 import os
