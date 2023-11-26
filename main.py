@@ -76,4 +76,6 @@ def index():
 @app.route('/kampe')
 def matches():
     return "OB MOD VEJGAARD"
-app.run()
+
+if __name__ == '__main__':
+    app.run()
