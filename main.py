@@ -1,4 +1,8 @@
-from my_functions import *
+#!/bin/python3
+
+from functions import *
+from flask import Flask, render_template
+
 
 #List of all matches__________________________________________________________________________________________
 dbu_season_start_date = "15/08/2023"
@@ -52,3 +56,24 @@ total_deposit = total_deposit_f()
 for i,name in enumerate(mobilepay_players_list):
     player_need_to_pay = player_remain_to_pay(i)
     print(player_need_to_pay, name)
+
+
+
+#Making it a webpage
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    player = dbu_names()
+    economy_list = []
+    len_list = len(player)
+    for name in range(len(player)):
+        dept = player_remain_to_pay(name)
+        economy_list.append(dept)
+    return render_template("index.html", len_list=len_list, player=player, economy_list=economy_list)
+    #return gg
+
+@app.route('/kampe')
+def matches():
+    return "OB MOD VEJGAARD"
+app.run(host="0.0.0.0",port="5001",debug=True)

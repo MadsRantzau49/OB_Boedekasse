@@ -1,0 +1,27 @@
+<html>
+<head>
+<title> OB BOEDEKASSE </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="30;url=http://http://192.168.0.100:5001/"></head>
+<body>
+	<h1>AKTIVE SPILLERE I ØB </h1>
+	
+	<table>
+	<tr>
+		<th>Spiller</th>
+		<th>Økonomi<th>
+	</tr>
+
+	{% for i in range(len_list) %}
+	<tr>
+		<td> {{player[i]}} </td>
+		<td> {{economy_list[i]}} </td>
+	</tr>
+	{% endfor %}
+
+
+
+
+	</table>
+</body>
+</html>
