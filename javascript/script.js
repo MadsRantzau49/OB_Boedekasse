@@ -1,27 +1,66 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
-let list = []; 
-let tempList =[];
-axios.request({
-    method: "GET",
-    url: "https://www.dbu.dk/resultater/kamp/193827_409842/kampinfo",
-}).then(response => {
-    const $ = cheerio.load(response.data); 
-    //only find data inside this specefic div.
-    const classWithPlayerNames = $("div.sr--match--team-cards");
-    //provide all data inside the div inside a temperary list and tried to trim it as much as possible
-    classWithPlayerNames.each((i, div) => {
-        tempList = ($(div).text().replace(/[\t\v\f\r ]+/g, ' ').trim().split("\n"));
-    });
-    //trim the last part manually
-    for(let i = 0; i < tempList.length; i++){
-        //check if the element is a space or nothing.
-        if(tempList[i].replace(/\s\t\v\f\r/, '') !== " " && tempList[i].length !== 0){
-            //The provided data started with a space so just ignore the first char. 
-            console.log(tempList[i][1]);
-            list.push(tempList[i].slice(1));
-        }
-    }
-    console.log(list);
 
-});
+async function findPlayersInMatch() {
+    try {
+        const response = await axios.get("https://www.dbu.dk/resultater/kamp/193827_409842/kampinfo");
+        const $ = cheerio.load(response.data);
+        const classWithPlayerNames = $("div.sr--match--team-cards");
+
+        let playerList = [];
+        classWithPlayerNames.each((_, div) => {
+            const tempList = $(div).text().replace(/[\t\v\f\r ]+/g, ' ').trim().split("\n");
+            tempList.forEach(string => {
+                if (string.trim() !== "" && string.length !== 0) {
+                    playerList.push(string.trim());
+                }
+            });
+        });
+
+        return playerList; // Return the playerList once it's populated
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        return []; // Return an empty array if there's an error
+    }
+}
+
+async function fetchDataAndPrint() {
+    let playerListFromMatch = await findPlayersInMatch();
+    console.log(playerListFromMatch);
+    return playerListFromMatch;
+}
+
+let playerList = fetchDataAndPrint();
+console.log(playerList);
+
+
+
+
+
+
+const playerData = require("./player_finance.json");
+
+function dbuNames() {
+    const dbuNameList = [];
+
+    playerData.forEach(function(player) {
+        dbuNameList.push(player.dbu_name);
+    });
+    return dbuNameList;
+}
+
+let dbuNamesList = dbuNames();
+
+
+function playerInMatch(dbuNameList, playerList) {
+    playerList.forEach(player => {
+        if (player.includes(dbuNameList)) {
+            console.log(player);
+        }
+    });
+}
+
+
+// playerInMatch(dbuNamesList,playerList);
+
+// console.log(dbuNamesList,playerList);
