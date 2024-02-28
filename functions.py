@@ -10,7 +10,7 @@ import re
 #Find a time in the JSON file, input are the name type dbu_name or mobilepay_name
 def search_database(filename,database,type):
     dbu_name_list = []
-    with open(os.path.dirname(__file__)+"/"+filename,"r", encoding="utf-8") as ap:
+    with open(os.path.dirname(__file__)+"/database/"+filename,"r", encoding="utf-8") as ap:
         data = json.load(ap)
         for i in range(len(data[database])):
             dbu_name_list.append(data[database][i][type])
@@ -44,7 +44,7 @@ def find_team_lineup(match_id,dbu_season_ID):
 
 #Insert all matches in database/player_finance.json
 def add_matches_to_database(matches_list,season):
-    with open(os.path.dirname(__file__)+"/database/player_finance.json","r+",encoding="utf-8") as ap:
+    with open(os.path.dirname(__file__)+"/database/matches.json","r+",encoding="utf-8") as ap:
         data = json.load(ap)
         for i in range(len(matches_list)):
             data["matches"][i]["season"] = season
@@ -73,7 +73,7 @@ def who_played_the_game(playerlist,match_HTML):
 
 
 def append_data_to_database(match,playerlist,len,match_result,fine):
-    with open(os.path.dirname(__file__)+"/database/player_finance.json","r+",encoding="utf-8") as ap:
+    with open(os.path.dirname(__file__)+"/database/matches.json","r+",encoding="utf-8") as ap:
         data = json.load(ap)
         for i in range(len):
             matchID = data["matches"][i]["matchID"]

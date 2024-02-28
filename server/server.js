@@ -1,5 +1,7 @@
 const express = require('express');
 const { exec } = require('child_process');
+const path = require('path');
+
 
 const app = express();
 const PORT = 3000;
@@ -10,12 +12,13 @@ app.use(express.static('public'));
 // Define a route to handle GET requests to the root URL
 app.get('/', (req, res) => {
     // Send the HTML file when accessing the root URL
-    res.sendFile(__dirname + '/../public/index.html');
+    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
 // Define a route to handle POST requests to execute Python script
 app.post('/execute-python', (req, res) => {
-    const pythonScriptPath = 'main.py';
+    const pythonScriptPath = path.join(__dirname, '..', 'main.py');
+
 
     exec(`python ${pythonScriptPath}`, (error, stdout, stderr) => {
         if (error) {
