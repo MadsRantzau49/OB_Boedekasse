@@ -12,8 +12,8 @@
             }
         },
         {
-            "dbu_name": "Jannik L&#228;gel Johansson",
-            "mobilepay_name": "Jannik L",
+            "dbu_name": "Jannik Lägel Johansson",
+            "mobilepay_name": "Jannik Lägel Johansson",
             "Deposit": 248,
             "Dept": 200,
             "extra_fines": {
@@ -89,8 +89,8 @@
             }
         },
         {
-            "dbu_name": "Martin B&#248;gh Eliasen",
-            "mobilepay_name": "Martin B",
+            "dbu_name": "Martin Bøgh Eliasen",
+            "mobilepay_name": "Martin Bøgh Eliasen",
             "Deposit": 284,
             "Dept": 180,
             "extra_fines": {
@@ -100,8 +100,8 @@
             }
         },
         {
-            "dbu_name": "Poul S&#248;nderup",
-            "mobilepay_name": "Poul Lynggaard",
+            "dbu_name": "Poul Sønderup",
+            "mobilepay_name": "Poul Lynggaard Sønderup",
             "Deposit": 282,
             "Dept": 200,
             "extra_fines": {
@@ -159,17 +159,6 @@
             "mobilepay_name": "Nikolaj Ovesen",
             "Deposit": 126,
             "Dept": 100,
-            "extra_fines": {
-                "yellow card": 0,
-                "red card": 0,
-                "others": 0
-            }
-        },
-        {
-            "dbu_name": "Rico Gertsen",
-            "mobilepay_name": "Rico S",
-            "Deposit": 115,
-            "Dept": 120,
             "extra_fines": {
                 "yellow card": 0,
                 "red card": 0,

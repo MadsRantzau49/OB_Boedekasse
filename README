@@ -1,0 +1,23 @@
+Mangler:
+-Ligge alle kampene og deres data in i JSON fil.
+
+-Tage data'en derfra istedet for hele tiden at webscrape
+
+-Lav en html side
+
+-Gør sådan man henter data'en fra json filerne med javascript.
+
+-Gør sådan man kan lave input fra hjemmesiden.
+
+featurlist på hjemmesiden:
+-Se alles gæld.
+-Se hvor man har fået sine bøder.
+-Se reglerne
+-Tilføj spiller
+-Fjern spiller
+
+
+Python funktioner:
+-Skaf en spillerliste
+
+-
