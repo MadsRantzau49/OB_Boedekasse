@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 // Define a route to handle POST requests to execute Python script
 app.post('/execute-python', (req, res) => {
-    const pythonScriptPath = path.join(__dirname, '..', 'main.py');
+    const pythonScriptPath = path.join(__dirname, '..', 'python', 'main.py');
 
 
     exec(`python ${pythonScriptPath}`, (error, stdout, stderr) => {
