@@ -10,7 +10,7 @@ app.use(express.static('public'));
 // Define a route to handle GET requests to the root URL
 app.get('/', (req, res) => {
     // Send the HTML file when accessing the root URL
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/../public/index.html');
 });
 
 // Define a route to handle POST requests to execute Python script

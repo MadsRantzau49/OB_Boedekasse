@@ -1,8 +1,6 @@
 #!/bin/python3
 
-from new_functions import *
-import unicodedata
-
+from functions import *
 
 dbu_match_ID_list = ["193827","193831","193834","193840","193845","193847","201625","201750","201753","202852","202855","202857"]
 season = "409842"
@@ -32,5 +30,4 @@ for match in dbu_match_ID_list:
     append_data_to_database(match,playerlist,len(dbu_match_ID_list),match_result,fine)
     update_dept(playerlist,fine,len(dbu_names))
 
-# _____________________
 
