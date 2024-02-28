@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execute Python Script</title>
+</head>
+<body>
+    <h1>Execute Python Script</h1>
+    <button id="executeButton">Execute Python Script</button>
+
+    <script>
+        document.getElementById('executeButton').addEventListener('click', function() {
+            fetch('/execute-python', { method: 'POST' })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Python script executed successfully!');
+                    } else {
+                        alert('Failed to execute Python script.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error executing Python script:', error);
+                    alert('Failed to execute Python script.');
+                });
+        });
+    </script>
+</body>
+</html>

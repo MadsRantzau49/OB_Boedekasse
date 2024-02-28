@@ -1,0 +1,257 @@
+{
+    "payingPlayers": [
+        {
+            "dbu_name": "Mads Rantzau Nielsen",
+            "mobilepay_name": "Mads Rantzau Nielsen",
+            "Deposit": 523,
+            "Dept": 160,
+            "extra_fines": {
+                "red card": 0,
+                "yellow card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Jannik Lägel Johansson",
+            "mobilepay_name": "Jannik Lägel Johansson",
+            "Deposit": 248,
+            "Dept": 200,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Markus Bruun Jakobsen",
+            "mobilepay_name": "Markus Bruun Jakobsen",
+            "Deposit": 227,
+            "Dept": 120,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Andreas Ahrenfeldt Laursen",
+            "mobilepay_name": "Andreas Ahrenfeldt Laursen",
+            "Deposit": 200,
+            "Dept": 140,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Phillip Wulff Kold",
+            "mobilepay_name": "Phillip Wulff",
+            "Deposit": 226,
+            "Dept": 120,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Lasse Christensen",
+            "mobilepay_name": "Lasse Christensen",
+            "Deposit": 198,
+            "Dept": 160,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Jakob Juul",
+            "mobilepay_name": "Jakob Sejer Juul",
+            "Deposit": 20,
+            "Dept": 160,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Kristian Pedersen",
+            "mobilepay_name": "Kristian Pedersen",
+            "Deposit": 226,
+            "Dept": 180,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Martin Bøgh Eliasen",
+            "mobilepay_name": "Martin Bøgh Eliasen",
+            "Deposit": 284,
+            "Dept": 180,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Poul Sønderup",
+            "mobilepay_name": "Poul Lynggaard Sønderup",
+            "Deposit": 282,
+            "Dept": 200,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Mathias Bundgaard Jensen",
+            "mobilepay_name": "Mathias Bundgaard Jensen",
+            "Deposit": 133,
+            "Dept": 100,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Mikkel Vangsted",
+            "mobilepay_name": "Mikkel Vangsted",
+            "Deposit": 185,
+            "Dept": 140,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Michael Buus",
+            "mobilepay_name": "Michael Buus",
+            "Deposit": 80,
+            "Dept": 140,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "David Nielsen",
+            "mobilepay_name": "AJ",
+            "Deposit": 231,
+            "Dept": 140,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Nikolaj Ovesen",
+            "mobilepay_name": "Nikolaj Ovesen",
+            "Deposit": 126,
+            "Dept": 100,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Nicolaj Lucas Bjerregaard",
+            "mobilepay_name": "Nicolaj Lucas Bjerregaard",
+            "Deposit": 0,
+            "Dept": 20,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Kasper Frausing Kristensen",
+            "mobilepay_name": "Kasper Frausing Kristensen",
+            "Deposit": 0,
+            "Dept": 120,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Emil Partsch",
+            "mobilepay_name": "Emil Arvad Partsch",
+            "Deposit": 0,
+            "Dept": 80,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Andreas Krog Nielsen",
+            "mobilepay_name": "Andreas Krog Nielsen",
+            "Deposit": 0,
+            "Dept": 40,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Lucas Askou",
+            "mobilepay_name": "Lucas Askou",
+            "Deposit": 0,
+            "Dept": 60,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "Victor Lahn Pedersen",
+            "mobilepay_name": "Victor Lahn Pedersen",
+            "Deposit": 0,
+            "Dept": 40,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "William Vedde",
+            "mobilepay_name": "William Vedde",
+            "Deposit": 0,
+            "Dept": 0,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        },
+        {
+            "dbu_name": "others",
+            "mobilepay_name": "others",
+            "Deposit": 0,
+            "Dept": 0,
+            "extra_fines": {
+                "yellow card": 0,
+                "red card": 0,
+                "others": 0
+            }
+        }
+    ]
+}

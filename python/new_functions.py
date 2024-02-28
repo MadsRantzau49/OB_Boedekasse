@@ -156,3 +156,69 @@ def oeb_won(result,win,lose,draw):
         return lose
     else:
         return draw
+    
+
+
+# RESET ALL PLAYER FINANCE JSON FILE + adding with active paying players list 
+#Reset everything exepct for extra fines for exampel yellow cars og taberdømt kamp osv. 
+def reset_fines(players_list):
+    with open(os.path.dirname(__file__)+"/player_finance.json","r+",encoding="utf-8") as ap:
+        data = json.load(ap)
+        for i in range(players_list):
+            data["payingPlayers"][i]["Dept"] = 0
+            data["payingPlayers"][i]["Deposit"] = 0
+
+        # Move the file pointer to the beginning of the file before writing
+        ap.seek(0)
+        
+        # Write the updated data back to the file
+        json.dump(data, ap, indent=4)
+
+        # Truncate the file to the current file position to remove any extra data. because the file add some weird ]} in the end. 
+        ap.truncate()
+
+
+
+#update player's dept in JSON file
+def update_dept(playerlist,fine,len_of_players):
+    with open(os.path.dirname(__file__)+"/player_finance.json","r+",encoding="utf-8") as ap:
+        data = json.load(ap)
+
+        for i in range(len_of_players):
+            if (data["payingPlayers"][i]["dbu_name"] in playerlist):
+                data["payingPlayers"][i]["Dept"] += fine
+                ap.seek(0)  # Move the cursor to the beginning of the file
+                json.dump(data, ap, indent=4)
+                ap.truncate()  # Truncate the remaining data in the file
+
+
+#Reads all transactions from the mobilepay box from the new season and update the player deposit
+def update_player_deposit(playerlist,dbu_season_start_date):
+    with open(os.path.dirname(__file__)+"/trans.csv","r",encoding="utf-8") as ap:
+        mobilepay_box_data = csv.reader(ap)
+
+        #define the start season date to a datetime instead of string so it can be compared.
+        dbu_season_start_date = datetime.strptime(dbu_season_start_date, "%d/%m/%Y")
+        for row in mobilepay_box_data:
+            # Extract the date string from the CSV row
+            transfer_date_str = row[0].split(',')[0].strip()
+
+            # Convert the date string to a datetime object
+            transaction_date = datetime.strptime(transfer_date_str, "%d/%m/%Y %H:%M")
+
+            if transaction_date > dbu_season_start_date:    
+                #Row[1] is name 
+                name = row[1]
+                #Row[3] is deposit number
+                deposit_number = int(row[3])
+
+                for i in range(len(playerlist)):
+                    player = playerlist[i]
+                    if player == name:
+                        with open(os.path.dirname(__file__)+"/player_finance.json","r+") as ap:
+                            data = json.load(ap)
+                            data["payingPlayers"][i]["Deposit"] += deposit_number
+                            ap.seek(0)  # Move the cursor to the beginning of the file
+                            json.dump(data, ap, indent=4)
+                            ap.truncate()  # Truncate the remaining data in the file
+                            break
