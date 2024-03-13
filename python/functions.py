@@ -6,11 +6,18 @@ import os
 from bs4 import BeautifulSoup
 import re
 
+current_directory = os.path.dirname(os.path.abspath(__file__))
+
+matches_file_path = os.path.join(current_directory, '..', 'public', 'database', 'matches.json')
+player_finance_file_path = os.path.join(current_directory, '..', 'public', 'database', 'player_finance.json')
+trans_file_path = os.path.join(current_directory, '..', 'public', 'database', 'trans.csv')
+database_file_path = os.path.join(current_directory, '..', 'public', 'database')
+
 
 #Find a time in the JSON file, input are the name type dbu_name or mobilepay_name
 def search_database(filename,database,type):
     dbu_name_list = []
-    with open(os.path.dirname(__file__)+"/../database/"+filename,"r", encoding="utf-8") as ap:
+    with open(database_file_path+"/"+filename,"r", encoding="utf-8") as ap:
         data = json.load(ap)
         for i in range(len(data[database])):
             dbu_name_list.append(data[database][i][type])
@@ -44,7 +51,7 @@ def find_team_lineup(match_id,dbu_season_ID):
 
 #Insert all matches in database/player_finance.json
 def add_matches_to_database(matches_list,season):
-    with open(os.path.dirname(__file__)+"/../database/matches.json","r+",encoding="utf-8") as ap:
+    with open(matches_file_path,"r+",encoding="utf-8") as ap:
         data = json.load(ap)
         for i in range(len(matches_list)):
             data["matches"][i]["season"] = season
@@ -73,7 +80,7 @@ def who_played_the_game(playerlist,match_HTML):
 
 
 def append_data_to_database(match,playerlist,len,match_result,fine):
-    with open(os.path.dirname(__file__)+"/../database/matches.json","r+",encoding="utf-8") as ap:
+    with open(matches_file_path,"r+",encoding="utf-8") as ap:
         data = json.load(ap)
         for i in range(len):
             matchID = data["matches"][i]["matchID"]
@@ -162,7 +169,7 @@ def oeb_won(result,win,lose,draw):
 # RESET ALL PLAYER FINANCE JSON FILE + adding with active paying players list 
 #Reset everything exepct for extra fines for exampel yellow cars og taberdømt kamp osv. 
 def reset_fines(players_list):
-    with open(os.path.dirname(__file__)+"/../database/player_finance.json","r+",encoding="utf-8") as ap:
+    with open(player_finance_file_path,"r+",encoding="utf-8") as ap:
         data = json.load(ap)
         for i in range(players_list):
             data["payingPlayers"][i]["Dept"] = 0
@@ -181,7 +188,7 @@ def reset_fines(players_list):
 
 #update player's dept in JSON file
 def update_dept(playerlist,fine,len_of_players):
-    with open(os.path.dirname(__file__)+"/../database/player_finance.json","r+",encoding="utf-8") as ap:
+    with open(player_finance_file_path,"r+",encoding="utf-8") as ap:
         data = json.load(ap)
 
         for i in range(len_of_players):
@@ -194,7 +201,7 @@ def update_dept(playerlist,fine,len_of_players):
 
 #Reads all transactions from the mobilepay box from the new season and update the player deposit
 def update_player_deposit(playerlist,dbu_season_start_date):
-    with open(os.path.dirname(__file__)+"/../database/trans.csv","r",encoding="utf-8") as ap:
+    with open(trans_file_path,"r",encoding="utf-8") as ap:
         mobilepay_box_data = csv.reader(ap)
 
         #define the start season date to a datetime instead of string so it can be compared.
@@ -215,7 +222,7 @@ def update_player_deposit(playerlist,dbu_season_start_date):
                 for i in range(len(playerlist)):
                     player = playerlist[i]
                     if player == name:
-                        with open(os.path.dirname(__file__)+"/../database/player_finance.json","r+") as ap:
+                        with open(player_finance_file_path,"r+") as ap:
                             data = json.load(ap)
                             data["payingPlayers"][i]["Deposit"] += deposit_number
                             ap.seek(0)  # Move the cursor to the beginning of the file
