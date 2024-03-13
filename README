@@ -10,14 +10,12 @@ Mangler:
 -Gør sådan man kan lave input fra hjemmesiden.
 
 featurlist på hjemmesiden:
--Se alles gæld.
--Se hvor man har fået sine bøder.
+-Se alles gæld. ✅
+-Se matches ✅
+-Lav waiting screen for python script evt med noob har skrevet det så vent venligst
+-Se hvor man har fået sine bøder / spiller stats
 -Se reglerne
 -Tilføj spiller
 -Fjern spiller
 
 
-Python funktioner:
--Skaf en spillerliste
-
--

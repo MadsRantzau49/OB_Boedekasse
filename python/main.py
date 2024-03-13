@@ -4,7 +4,7 @@ from functions import *
 
 dbu_match_ID_list = ["193827","193831","193834","193840","193845","193847","201625","201750","201753","202852","202855","202857"]
 season = "409842"
-season_start = "15/08/2023"
+season_start = "13/03/2024"
 
 
 #list of all dbu players
