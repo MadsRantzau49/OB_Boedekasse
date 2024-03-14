@@ -24,12 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 deposit.textContent = player.Deposit;
                 row.appendChild(deposit);
             
-                const extraFinesHeading = document.createElement('td');
-                extraFinesHeading.textContent = 'Extra fines:';
-                row.appendChild(extraFinesHeading);
+
             
                 const extraFinesList = document.createElement('td');
-                extraFinesList.textContent = `Red Card: ${player.extra_fines['red card']} , Yellow Card: ${player.extra_fines['yellow card']}`;
+                extraFinesList.innerHTML = `Rødt kort: ${player.extra_fines['red card']}<br>Gult kort: ${player.extra_fines['yellow card']}<br>Andre ${player.extra_fines['others']}`;
                 row.appendChild(extraFinesList);
             
                 jsonDisplayDiv.appendChild(row);

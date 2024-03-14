@@ -109,6 +109,22 @@ def find_match_result(match_id,dbu_season_ID):
     # Parse HTML using BeautifulSoup
     soup = BeautifulSoup(match_result_html_request.text, 'html.parser')
     
+    #Find which day the match is played
+    matchDate = soup.find_all("div", {"class": "date"})
+    matchDate = str(matchDate)
+    matchDate = re.search(r'\d{2}-\d{2}-\d{4}', matchDate)
+    matchDate = matchDate.group()
+    matchDate = datetime.strptime(matchDate, "%d-%m-%Y")
+
+    #Find the current date
+    today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+
+    # Compare dates
+    if matchDate >= today:
+        
+        return False
+    
+
     # Find all team lineup information
     match_result_info = soup.find_all("div", {"class": "sr--match--live-score--result"})
     
@@ -128,9 +144,8 @@ def find_match_result(match_id,dbu_season_ID):
         oster_sundby_score = int(lines[-2])
         opponent_score = int(lines[1])
     # Storing scores in the desired format
-    result = {'oester_sundby': oster_sundby_score, 'opponent': opponent_score}
+    return  {'oester_sundby': oster_sundby_score, 'opponent': opponent_score}
 
-    return result
 
 def calculate_fine(result):
     oeb = result["oester_sundby"]
@@ -174,6 +189,7 @@ def reset_fines(players_list):
         for i in range(players_list):
             data["payingPlayers"][i]["Dept"] = 0
             data["payingPlayers"][i]["Deposit"] = 0
+            
 
         # Move the file pointer to the beginning of the file before writing
         ap.seek(0)
