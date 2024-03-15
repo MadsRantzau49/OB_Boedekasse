@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
 
             
-                const extraFinesList = document.createElement('td');
-                extraFinesList.innerHTML = `Rødt kort: ${player.extra_fines['red card']}<br>Gult kort: ${player.extra_fines['yellow card']}<br>Andre ${player.extra_fines['others']}`;
-                row.appendChild(extraFinesList);
+                // const extraFinesList = document.createElement('td');
+                // extraFinesList.innerHTML = `Rødt kort: ${player.extra_fines['red card']}<br>Gult kort: ${player.extra_fines['yellow card']}<br>Andre ${player.extra_fines['others']}`;
+                // row.appendChild(extraFinesList);
             
                 jsonDisplayDiv.appendChild(row);
             });

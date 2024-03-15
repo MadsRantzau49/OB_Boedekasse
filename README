@@ -1,18 +1,7 @@
-Mangler:
--Ligge alle kampene og deres data in i JSON fil.
-
--Tage data'en derfra istedet for hele tiden at webscrape
-
--Lav en html side
-
--Gør sådan man henter data'en fra json filerne med javascript.
-
--Gør sådan man kan lave input fra hjemmesiden.
-
 featurlist på hjemmesiden:
 -Se alles gæld. ✅
 -Se matches ✅
--Lav waiting screen for python script evt med noob har skrevet det så vent venligst
+-Lav waiting screen for python script evt med noob har skrevet det så vent venligst ✅
 -Se hvor man har fået sine bøder / spiller stats
 -Se reglerne
 -Tilføj spiller
@@ -21,3 +10,4 @@ featurlist på hjemmesiden:
 -Sortering af de forskellige tables. 
 -Gør det online
 -Tilføj og fjern ekstra bøder
+-Se bødekasse stats (økonomi osv)
