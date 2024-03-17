@@ -27,7 +27,7 @@ function loading_screen(status){
         text.style.textAlign = "center";
         text.style.width = "100%";
         text.style.top = "50%";
-        text.textContent = "Wait Please, This Code Is Written By a Noob";
+        text.textContent = "Vent Venligst, Denne kode er skrevet af en Amatør";
         text.id="noob";
         document.body.appendChild(text);
     }

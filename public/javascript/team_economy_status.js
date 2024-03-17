@@ -16,20 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 dbuName.textContent = player.dbu_name;
                 row.appendChild(dbuName);
             
-                const dept = document.createElement('td');
-                dept.textContent = player.Dept;
-                row.appendChild(dept);
-            
-                const deposit = document.createElement('td');
-                deposit.textContent = player.Deposit;
-                row.appendChild(deposit);
-            
-
-            
-                // const extraFinesList = document.createElement('td');
-                // extraFinesList.innerHTML = `Rødt kort: ${player.extra_fines['red card']}<br>Gult kort: ${player.extra_fines['yellow card']}<br>Andre ${player.extra_fines['others']}`;
-                // row.appendChild(extraFinesList);
-            
+                const balance = document.createElement('td');
+                let calculate_balance = player.Deposit - player.Dept;
+                balance.textContent = calculate_balance;
+                if (calculate_balance < 0){
+                    balance.style.color="red";
+                } else {
+                    balance.style.color="green";
+                }
+                row.appendChild(balance);
+                       
                 jsonDisplayDiv.appendChild(row);
             });
         })

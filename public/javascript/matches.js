@@ -27,6 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 const playerList = document.createElement('td');
                 playerList.textContent = match.playerlist;
                 row.appendChild(playerList)
+
+
+                const match_link = document.createElement("td");
+                const a = document.createElement('a'); 
+                const link = `https://www.dbu.dk/resultater/kamp/ ${match.matchID}_${match.season}/kampinfo`;
+                a.href = link; 
+                a.textContent = link; 
+                a.target = "_blank"; // Open link in a new tab
+                match_link.appendChild(a); 
+                row.appendChild(match_link); 
             
                 jsonDisplayDiv.appendChild(row);
             });

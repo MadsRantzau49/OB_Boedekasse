@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
     <h3><a href="index.html">Holdet</a></h3>
     <h3><a href="match.html">Kampe spillet</a></h3>
     <h3><a href="player.html">Spiller Stats</a></h3>
+    <h3><a id="executeButton">Opdater data</a></h3>
+    </nav>
 
-    <button id="executeButton">Opdater data</button>
     <input type="text" id="player_name" placeholder="spillernavn">
     <button id="searchButton">Søg spillere (enter)</button>
 
@@ -22,23 +24,13 @@
         <table id="player_finance_table">
             <tr>
                 <th>Navn</th>
-                <th>Mangler at betale</th>
+                <th>Balance</th>
+                <th>Total bøder</th>
                 <th>Har betalt</th>
                 <th>Ekstra bøder</th>
+                <th>Kampe spillet</th>
             </tr>
         </table>
-        
-        <div id="matches_played">
-            <table id="matches_played_table">
-                <tr>
-                    <th>ØB</th>
-                    <th>Opp</th>
-                    <th>Bøde</th>
-                </tr>
-            </table>
-
-    </div>
-    
 
 </body>
 </html>

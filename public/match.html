@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Execute Python Script</title>
     <script defer src="/javascript/matches.js"></script>
+    <script defer src="/javascript/run_python.js"></script>
     <link rel="stylesheet" href="style.css">
 
 
 </head>
 <body>
+    <nav>
     <h3><a href="index.html">Holdet</a></h3>
     <h3><a href="match.html">Kampe spillet</a></h3>
-    <h3><a href="player.html">Spiller Stats</a></h3>  
-    
+    <h3><a href="player.html">Spiller Stats</a></h3> 
+    <h3><a id="executeButton">Opdater data</a></h3> 
+    </nav>
     <div id="matches_played">
         <table id="matches_played_table">
             <tr>
@@ -21,6 +24,7 @@
                 <th>Opp</th>
                 <th>Bøde</th>
                 <th>Spillerliste</th>
+                <th>Link til kampen</th>
             </tr>
         </table>
 

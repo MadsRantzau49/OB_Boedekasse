@@ -1,278 +1,88 @@
 {
     "matches": [
         {
-            "season": "409842",
-            "matchID": "193827",
-            "playerlist": [
-                "Mads Rantzau Nielsen",
-                "Jannik L\u00e4gel Johansson",
-                "Markus Bruun Jakobsen",
-                "Andreas Ahrenfeldt Laursen",
-                "Phillip Wulff Kold",
-                "Lasse Christensen",
-                "Jakob Juul",
-                "Kristian Pedersen",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mikkel Vangsted",
-                "Michael Buus",
-                "Nikolaj Ovesen"
-            ],
-            "fine": 44,
-            "match_result": {
-                "oester_sundby": 17,
-                "opponent": 0
-            }
-        },
-        {
-            "season": "409842",
-            "matchID": "193831",
-            "playerlist": [
-                "Mads Rantzau Nielsen",
-                "Jannik L\u00e4gel Johansson",
-                "Lasse Christensen",
-                "Jakob Juul",
-                "Kristian Pedersen",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mikkel Vangsted",
-                "David Nielsen",
-                "Nikolaj Ovesen",
-                "Nicolaj Lucas Bjerregaard"
-            ],
-            "fine": 18,
-            "match_result": {
-                "oester_sundby": 4,
-                "opponent": 0
-            }
-        },
-        {
-            "season": "409842",
-            "matchID": "193834",
-            "playerlist": [
-                "Mads Rantzau Nielsen",
-                "Jannik L\u00e4gel Johansson",
-                "Andreas Ahrenfeldt Laursen",
-                "Phillip Wulff Kold",
-                "Lasse Christensen",
-                "Kristian Pedersen",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mikkel Vangsted",
-                "Michael Buus",
-                "David Nielsen",
-                "Nikolaj Ovesen"
-            ],
-            "fine": 27,
-            "match_result": {
-                "oester_sundby": 6,
-                "opponent": 1
-            }
-        },
-        {
-            "season": "409842",
-            "matchID": "193840",
-            "playerlist": [
-                "Mads Rantzau Nielsen",
-                "Jannik L\u00e4gel Johansson",
-                "Markus Bruun Jakobsen",
-                "Andreas Ahrenfeldt Laursen",
-                "Phillip Wulff Kold",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mathias Bundgaard Jensen",
-                "David Nielsen",
-                "Kasper Frausing Kristensen",
-                "Emil Partsch",
-                "Andreas Krog Nielsen",
-                "Victor Lahn Pedersen"
-            ],
-            "fine": 36,
-            "match_result": {
-                "oester_sundby": 13,
-                "opponent": 0
-            }
-        },
-        {
-            "season": "409842",
-            "matchID": "193845",
-            "playerlist": [
-                "Mads Rantzau Nielsen",
-                "Jannik L\u00e4gel Johansson",
-                "Andreas Ahrenfeldt Laursen",
-                "Lasse Christensen",
-                "Jakob Juul",
-                "Kristian Pedersen",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mikkel Vangsted",
-                "Michael Buus",
-                "Nikolaj Ovesen",
-                "Kasper Frausing Kristensen",
-                "Emil Partsch"
-            ],
-            "fine": 21,
-            "match_result": {
-                "oester_sundby": 3,
-                "opponent": 1
-            }
-        },
-        {
-            "season": "409842",
-            "matchID": "193847",
-            "playerlist": [
-                "Jannik L\u00e4gel Johansson",
-                "Andreas Ahrenfeldt Laursen",
-                "Phillip Wulff Kold",
-                "Lasse Christensen",
-                "Jakob Juul",
-                "Kristian Pedersen",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mathias Bundgaard Jensen",
-                "Michael Buus",
-                "Nikolaj Ovesen",
-                "Kasper Frausing Kristensen",
-                "Lucas Askou"
-            ],
-            "fine": 16,
-            "match_result": {
-                "oester_sundby": 3,
-                "opponent": 0
-            }
-        },
-        {
-            "season": "409842",
-            "matchID": "201625",
-            "playerlist": [
-                "Mads Rantzau Nielsen",
-                "Jannik L\u00e4gel Johansson",
-                "Markus Bruun Jakobsen",
-                "Andreas Ahrenfeldt Laursen",
-                "Kristian Pedersen",
-                "Poul S\u00f8nderup",
-                "Mathias Bundgaard Jensen",
-                "Mikkel Vangsted",
-                "David Nielsen",
-                "Kasper Frausing Kristensen",
-                "Emil Partsch",
-                "Lucas Askou"
-            ],
-            "fine": 28,
-            "match_result": {
-                "oester_sundby": 9,
-                "opponent": 0
-            }
-        },
-        {
-            "season": "409842",
-            "matchID": "201750",
-            "playerlist": [
-                "Mads Rantzau Nielsen",
-                "Jannik L\u00e4gel Johansson",
-                "Markus Bruun Jakobsen",
-                "Andreas Ahrenfeldt Laursen",
-                "Phillip Wulff Kold",
-                "Lasse Christensen",
-                "Jakob Juul",
-                "Kristian Pedersen",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mathias Bundgaard Jensen",
-                "Mikkel Vangsted",
-                "Michael Buus",
-                "David Nielsen"
-            ],
-            "fine": 28,
-            "match_result": {
-                "oester_sundby": 4,
-                "opponent": 2
-            }
-        },
-        {
-            "season": "409842",
-            "matchID": "201753",
-            "playerlist": [
-                "Jannik L\u00e4gel Johansson",
-                "Markus Bruun Jakobsen",
-                "Phillip Wulff Kold",
-                "Lasse Christensen",
-                "Jakob Juul",
-                "Kristian Pedersen",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mathias Bundgaard Jensen",
-                "Michael Buus",
-                "David Nielsen",
-                "Kasper Frausing Kristensen",
-                "Emil Partsch",
-                "Victor Lahn Pedersen"
-            ],
-            "fine": 25,
-            "match_result": {
-                "oester_sundby": 5,
-                "opponent": 1
-            }
-        },
-        {
-            "season": "409842",
-            "matchID": "202852",
+            "season": "427115",
+            "matchID": "894708",
             "playerlist": [],
-            "fine": 16,
-            "match_result": {
-                "oester_sundby": 3,
-                "opponent": 0
-            }
+            "fine": 0,
+            "match_result": {}
         },
         {
-            "season": "409842",
-            "matchID": "202855",
-            "playerlist": [
-                "Mads Rantzau Nielsen",
-                "Jannik L\u00e4gel Johansson",
-                "Markus Bruun Jakobsen",
-                "Lasse Christensen",
-                "Jakob Juul",
-                "Kristian Pedersen",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mikkel Vangsted",
-                "Michael Buus",
-                "David Nielsen",
-                "Kasper Frausing Kristensen",
-                "Andreas Krog Nielsen",
-                "Lucas Askou"
-            ],
-            "fine": 19,
-            "match_result": {
-                "oester_sundby": 2,
-                "opponent": 1
-            }
+            "season": "427115",
+            "matchID": "894711",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
         },
         {
-            "season": "409842",
-            "matchID": "202857",
-            "playerlist": [
-                "Mads Rantzau Nielsen",
-                "Jannik L\u00e4gel Johansson",
-                "Markus Bruun Jakobsen",
-                "Andreas Ahrenfeldt Laursen",
-                "Phillip Wulff Kold",
-                "Lasse Christensen",
-                "Jakob Juul",
-                "Kristian Pedersen",
-                "Martin B\u00f8gh Eliasen",
-                "Poul S\u00f8nderup",
-                "Mathias Bundgaard Jensen",
-                "Mikkel Vangsted",
-                "Michael Buus",
-                "David Nielsen"
-            ],
-            "fine": 16,
-            "match_result": {
-                "oester_sundby": 3,
-                "opponent": 0
-            }
+            "season": "427115",
+            "matchID": "894714",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
+        },
+        {
+            "season": "427115",
+            "matchID": "894714",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
+        },
+        {
+            "season": "427115",
+            "matchID": "894809",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
+        },
+        {
+            "season": "427115",
+            "matchID": "895540",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
+        },
+        {
+            "season": "427115",
+            "matchID": "895598",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
+        },
+        {
+            "season": "427115",
+            "matchID": "895603",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
+        },
+        {
+            "season": "427115",
+            "matchID": "895544",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
+        },
+        {
+            "season": "427115",
+            "matchID": "895606",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
+        },
+        {
+            "season": "427115",
+            "matchID": "895609",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
+        },
+        {
+            "season": "427115",
+            "matchID": "895628",
+            "playerlist": [],
+            "fine": 0,
+            "match_result": {}
         },
         {
             "season": "427115",

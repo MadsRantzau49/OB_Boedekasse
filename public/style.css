@@ -124,3 +124,25 @@ body {
   #noob {
     animation: rotate 5s linear infinite; /* adjust timing and iteration as needed */
   }
+
+
+/* NAVIGATIONSBAR */
+  nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+  }
+  nav h3 {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  nav h3 a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  nav h3 a:hover {
+    background-color: #555;
+  }
