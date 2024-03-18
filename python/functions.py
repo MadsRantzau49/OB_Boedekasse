@@ -58,7 +58,7 @@ def add_matches_to_database(matches_list,season):
             data["matches"][i]["matchID"] = matches_list[i]
             data["matches"][i]["playerlist"] = []
             data["matches"][i]["match_result"] = {}
-            data["matches"][i]["fine"] = 0
+            data["matches"][i]["fine"] = ""
 
         # Move the file pointer to the beginning of the file before writing
         ap.seek(0)
