@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('/database/player_finance.json')
         .then(response => {
@@ -7,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
+            const latest_search_local_storage = localStorage.getItem("latest_search");
+                
             const jsonDisplayDiv = document.getElementById('player_finance_table');
             data.payingPlayers.forEach(player => {
 
@@ -25,8 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     balance.style.color="green";
                 }
                 row.appendChild(balance);
-                       
-                jsonDisplayDiv.appendChild(row);
+
+                if(latest_search_local_storage !== null){
+                    if (player.dbu_name.toLowerCase().includes(latest_search_local_storage.toLowerCase())) {
+                        jsonDisplayDiv.insertBefore(row, jsonDisplayDiv.getElementsByTagName('tr')[1]);
+                    }
+                    else {
+                        jsonDisplayDiv.appendChild(row);
+                    }
+                }                      
             });
         })
         .catch(error => {
