@@ -8,7 +8,11 @@
             "extra_fines": {
                 "red card": 500,
                 "yellow card": 150,
-                "others": {}
+                "others": {
+                    "Glemte at m\u00f8de op": 20,
+                    "Spildt \u00f8l": 50,
+                    "Glemte sager": 10
+                }
             }
         },
         {

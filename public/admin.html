@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Execute Python Script</title>
     <script defer src="/javascript/run_python.js"></script>
-    <script defer src="/javascript/team_economy_status.js"></script>
+    <script defer src="/javascript/remove_player.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,23 +15,23 @@
     <h3><a href="player.html">Spiller Stats</a></h3>
     <h3><a id="executeButton">Opdater data</a></h3>
     <h3><a href="admin.html">admin</a></h3>
-
-
     </nav>
 
-    <div id="player_finance">
-        <table id="latest_searching_table">
+    <div class="add_player">
+        <input type="text" id="dbu_player_name" placeholder="fulde dbu navn">
+        <input type="text" id="mp_player_name" placeholder="fulde mobilepay navn">
+        <input type="button" id="submit_player" value="Opret Spiller">
+    </div>
 
-        </table>        
-        <table id="player_finance_table">
-            <tr>
-                <th>Navn</th>
-                <th>Balance</th>
-            </tr>
-        </table>
+    <div class="remove_player">
+        <input type="text" id="player_name" placeholder="spillernavn">
+        <button id="searchButton">Søg spillere (enter)</button>
 
     </div>
     
+    <div class="edit_fines">
+
+    </div>
 
 </body>
 </html>
