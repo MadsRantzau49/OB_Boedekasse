@@ -8,7 +8,9 @@ searched_player_button.addEventListener("click",() => {
     elementsToRemove.forEach(function(element) {
         element.parentNode.removeChild(element);
     });
-
+    
+    
+    
 
     fetch("/database/player_finance.json")
     .then(response => {
@@ -28,8 +30,6 @@ searched_player_button.addEventListener("click",() => {
                     {label: "Mobilepay navn", type: "text", id: "new_mp_name", value: player.mobilepay_name},
                     {label: "Røde kort", type: "number", id: "new_red", value: player.extra_fines.red_card},
                     {label: "Gule kort", type: "number", id: "new_yellow", value: player.extra_fines.yellow_card},
-                    {label: "Bøde Beskrivelse", type: "text", id: "new_others", value: player.extra_fines.others},
-                    {label: "Kroner", type: "number", id: "new_others_price", value: player.extra_fines.others_price}
                 ];
                 
                 labelsAndValues.forEach(item => {
@@ -49,6 +49,87 @@ searched_player_button.addEventListener("click",() => {
                     edit_div.appendChild(label);
                     edit_div.appendChild(input);
                 });
+                edit_div.appendChild(document.createElement("br"));
+                
+                
+                // Create a table element
+                let fine_table = document.createElement("table");
+                fine_table.id="extra_fines_table";
+                fine_table.className="labels_and_input";
+
+
+                // Create a table row for the header
+                var headerRow = document.createElement("tr");
+
+                // Create table header cells
+                var headerCell1 = document.createElement("th");
+                headerCell1.textContent = "Beskrivelse";
+
+                var headerCell2 = document.createElement("th");
+                headerCell2.textContent = "Kroner";
+
+                var headerCell3 = document.createElement("th");
+                headerCell3.textContent = "SLET BØDE";
+
+                // Append header cells to the header row
+                headerRow.appendChild(headerCell1);
+                headerRow.appendChild(headerCell2);
+                headerRow.appendChild(headerCell3);
+
+                // Append the header row to the table
+                fine_table.appendChild(headerRow);
+
+                div.appendChild(fine_table);
+                
+                player.extra_fines.others.forEach((fine_description,index) =>{
+                    let row = document.createElement("tr");
+
+                    let fine_price = player.extra_fines.others_price[index];
+                    
+                    let fine_description_element = document.createElement("td");
+                    fine_description_element.textContent = fine_description;
+                    row.appendChild(fine_description_element);
+
+                    let fine_price_element = document.createElement("td");
+                    fine_price_element.textContent = fine_price;
+                    row.appendChild(fine_price_element);
+
+                    let delete_fine = document.createElement("td");
+                    let delete_fine_button = document.createElement("button");
+                    delete_fine_button.id = "fine"+index;
+                    delete_fine_button.textContent = "Fjern bøde";
+                    delete_fine.appendChild(delete_fine_button);
+                    row.appendChild(delete_fine);
+
+                    fine_table.appendChild(row);
+                    
+
+                });
+                let row = document.createElement("tr");
+
+                let create_fine = document.createElement("td");
+                let fine_description_input = document.createElement("input");
+                fine_description_input.type = "text";
+                fine_description_input.placeholder = "Beskrivelse";
+                create_fine.appendChild(fine_description_input);
+                row.appendChild(create_fine);
+
+                let create_price = document.createElement("td");
+                let fine_price_input = document.createElement("input");
+                fine_price_input.type = "number";
+                fine_price_input.placeholder = "pris";
+                create_price.appendChild(fine_price_input);
+                row.appendChild(create_price);
+
+                let delete_fine = document.createElement("td");
+                let delete_fine_button = document.createElement("button");
+                delete_fine_button.id = "create_new_fine";
+                delete_fine_button.textContent = "Opret bøde";
+                delete_fine.appendChild(delete_fine_button);
+                row.appendChild(delete_fine);
+
+                fine_table.appendChild(row);
+
 
                 let save_changes_button = document.createElement("button");
                 save_changes_button.id = "save_changes_button";

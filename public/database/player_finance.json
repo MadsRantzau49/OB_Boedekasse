@@ -307,9 +307,15 @@
             "extra_fines": {
                 "red_card": "0",
                 "yellow_card": "0",
-                "others": [],
+                "others": [
+                    "Glemt h\u00e5ndl\u00e6de",
+                    "Selvm\u00e5l",
+                    "Afbud p\u00e5 dagen"
+                ],
                 "others_price": [
-                    12
+                    12,
+                    20,
+                    50
                 ]
             },
             "balance": 0
