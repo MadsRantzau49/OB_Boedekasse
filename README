@@ -1,14 +1,27 @@
 featurlist på hjemmesiden:
+
+Før publish:
 -Se alles gæld. ✅
 -Se matches ✅
 -Lav waiting screen for python script evt med noob har skrevet det så vent venligst ✅
--Se hvor man har fået sine bøder / spiller stats
+-Se hvor man har fået sine bøder / spiller stats✅
 -Se reglerne
--Tilføj spiller
--Fjern spiller
+-Tilføj spiller✅
+-Fjern spiller✅
 -Tilføj favorit, sådan man selv kommer op i toppen af dokumnetet ✅
--Sortering af de forskellige tables. 
 -Gør det online
 -Tilføj og fjern ekstra bøder
 -Se bødekasse stats (økonomi osv)
+-Hent localstorage på startsiden sådan man burde komme op øverste
+-spiller stats, få ekstra bøder til at se bedre ud.
+-Debug opdater data, sådan man ikke kan spam den (måske)
+-Password på admin
+
+
+nice features:
+-Sortering af de forskellige tables. 
 -Hent mobilepay data'en selv. 
+-Progressbar op opdater_data (ingen ide om hvordan)
+-Se hvilke kampe der er givet kort
+-Se hvilke dage der er givet ekstra bøder
+-Lav vælg en spiller på admin til en søge option også
