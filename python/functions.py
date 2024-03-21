@@ -147,16 +147,10 @@ def find_match_result(match_id,dbu_season_ID):
     return  {'oester_sundby': oster_sundby_score, 'opponent': opponent_score}
 
 
-def calculate_fine(result):
+def calculate_fine(result,won_match,draw_match,lost_match,conceded_goal,scored_goal):
     oeb = result["oester_sundby"]
     opp = result["opponent"]
-
-    won_match = 10
-    lost_match = 30
-    draw_match = 20
-    conceded_goal = 5
-    scored_goal = 2 
-    
+   
     fine = 0
 
     #depends who won 
@@ -189,6 +183,8 @@ def reset_fines(players_list):
         for i in range(players_list):
             data["payingPlayers"][i]["Dept"] = 0
             data["payingPlayers"][i]["Deposit"] = 0
+            data["payingPlayers"][i]["balance"] = 0    
+
             
 
         # Move the file pointer to the beginning of the file before writing
@@ -245,3 +241,23 @@ def update_player_deposit(playerlist,dbu_season_start_date):
                             json.dump(data, ap, indent=4)
                             ap.truncate()  # Truncate the remaining data in the file
                             break
+
+
+def find_balance(yellow_card_fine,red_card_fine):
+    with open(player_finance_file_path,"r+",encoding="utf-8") as ap:
+        data = json.load(ap)
+
+        for i in range(len(data["payingPlayers"])):
+            dept = data["payingPlayers"][i]["Dept"]
+            deposit = data["payingPlayers"][i]["Deposit"]
+            red = int(data["payingPlayers"][i]["extra_fines"]["red_card"])
+            yellow = int(data["payingPlayers"][i]["extra_fines"]["yellow_card"])
+
+            balance = dept - deposit + (red * red_card_fine) + (yellow * yellow_card_fine)
+            data["payingPlayers"][i]["balance"] = balance
+
+
+
+            ap.seek(0)  # Move the cursor to the beginning of the file
+            json.dump(data, ap, indent=4)
+            ap.truncate()  # Truncate the remaining data in the file

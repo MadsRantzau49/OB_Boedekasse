@@ -8,6 +8,15 @@ season = "409842"
 # season = "427115"
 season_start = "13/03/2024"
 
+won_match = 10
+draw_match = 20
+lost_match = 30
+
+conceded_goal = 5
+scored_goal = 2 
+
+red_card_fine = 100
+yellow_card_fine = 50
 
 #list of all dbu players
 dbu_names = search_database("player_finance.json","payingPlayers","dbu_name")
@@ -28,10 +37,11 @@ for match in dbu_match_ID_list:
     match_result = find_match_result(match,season)
     if match_result == False:
         break
-    fine = calculate_fine(match_result)
+    fine = calculate_fine(match_result,won_match,draw_match,lost_match,conceded_goal,scored_goal)
     team_lineup_in_match = find_team_lineup(match,season)
     playerlist = who_played_the_game(dbu_names,team_lineup_in_match)
     append_data_to_database(match,playerlist,len(dbu_match_ID_list),match_result,fine)
     update_dept(playerlist,fine,len(dbu_names))
+    find_balance(yellow_card_fine,red_card_fine) 
 
 

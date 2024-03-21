@@ -6,12 +6,14 @@
             "Deposit": 0,
             "Dept": 237,
             "extra_fines": {
-                "red_card": "1",
-                "yellow_card": "1",
-                "others": [],
-                "others_price": []
-            },
-            "balance": 387
+                "red_card": 500,
+                "yellow_card": 150,
+                "others": {
+                    "Glemte at m\u00f8de op": 20,
+                    "Spildt \u00f8l": 50,
+                    "Glemte sager": 10
+                }
+            }
         },
         {
             "dbu_name": "Jannik L\u00e4gel Johansson",
@@ -21,10 +23,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 278
+                "others": {}
+            }
         },
         {
             "dbu_name": "Markus Bruun Jakobsen",
@@ -34,10 +34,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 196
+                "others": {}
+            }
         },
         {
             "dbu_name": "Andreas Ahrenfeldt Laursen",
@@ -47,10 +45,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 216
+                "others": {}
+            }
         },
         {
             "dbu_name": "Phillip Wulff Kold",
@@ -60,10 +56,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 192
+                "others": {}
+            }
         },
         {
             "dbu_name": "Lasse Christensen",
@@ -73,10 +67,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 214
+                "others": {}
+            }
         },
         {
             "dbu_name": "Jakob Juul",
@@ -86,10 +78,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 187
+                "others": {}
+            }
         },
         {
             "dbu_name": "Kristian Pedersen",
@@ -99,10 +89,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 242
+                "others": {}
+            }
         },
         {
             "dbu_name": "Martin B\u00f8gh Eliasen",
@@ -112,10 +100,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 250
+                "others": {}
+            }
         },
         {
             "dbu_name": "Poul S\u00f8nderup",
@@ -125,10 +111,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 278
+                "others": {}
+            }
         },
         {
             "dbu_name": "Mathias Bundgaard Jensen",
@@ -138,10 +122,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 149
+                "others": {}
+            }
         },
         {
             "dbu_name": "Mikkel Vangsted",
@@ -151,10 +133,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 201
+                "others": {}
+            }
         },
         {
             "dbu_name": "Michael Buus",
@@ -164,10 +144,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 196
+                "others": {}
+            }
         },
         {
             "dbu_name": "David Nielsen",
@@ -177,10 +155,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 197
+                "others": {}
+            }
         },
         {
             "dbu_name": "Nikolaj Ovesen",
@@ -190,10 +166,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 126
+                "others": {}
+            }
         },
         {
             "dbu_name": "Nicolaj Lucas Bjerregaard",
@@ -203,10 +177,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 18
+                "others": {}
+            }
         },
         {
             "dbu_name": "Kasper Frausing Kristensen",
@@ -216,10 +188,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 145
+                "others": {}
+            }
         },
         {
             "dbu_name": "Emil Partsch",
@@ -229,10 +199,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 110
+                "others": {}
+            }
         },
         {
             "dbu_name": "Andreas Krog Nielsen",
@@ -242,10 +210,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 55
+                "others": {}
+            }
         },
         {
             "dbu_name": "Lucas Askou",
@@ -255,10 +221,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 63
+                "others": {}
+            }
         },
         {
             "dbu_name": "Victor Lahn Pedersen",
@@ -268,10 +232,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 61
+                "others": {}
+            }
         },
         {
             "dbu_name": "Ryan N\u00f8rgaard",
@@ -281,10 +243,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 0
+                "others": {}
+            }
         },
         {
             "dbu_name": "William Marin Vedde",
@@ -294,25 +254,8 @@
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
-                "others": [],
-                "others_price": []
-            },
-            "balance": 0
-        },
-        {
-            "dbu_name": "test",
-            "mobilepay_name": "testtt",
-            "Deposit": 0,
-            "Dept": 0,
-            "extra_fines": {
-                "red_card": "0",
-                "yellow_card": "0",
-                "others": [],
-                "others_price": [
-                    12
-                ]
-            },
-            "balance": 0
+                "others": {}
+            }
         }
     ]
 }

@@ -1,6 +1,7 @@
 const express = require('express');
 const { exec } = require('child_process');
 const path = require('path');
+const fs = require("fs");
 
 
 
@@ -9,6 +10,10 @@ const PORT = 3000;
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
+
+//Make the server able to receive client json data.
+app.use(express.json());
+
 
 // Define a route to handle GET requests to the root URL
 app.get('/', (req, res) => {
@@ -40,14 +45,15 @@ app.post("/add_player", (req, res) => {
 
     // Append quiz data to the current JSON file
     fs.readFile("public/database/player_finance.json", "utf8", (err, data) => {
-        let player_data = []
+        let player_data = [];
         //Get the current data
         player_data = JSON.parse(data);
         //Insert the current/old questions
-        player_data.quiz.push(new_player);
+        player_data.payingPlayers.push(new_player);
 
         // Convert the updated data back to JSON format
-        const updatedJSON = JSON.stringify(questionsData, null, 4); // 2 is for indentation for readability
+        const updatedJSON = JSON.stringify(player_data, null, 4); // 2 is for indentation for readability
+        console.log(updatedJSON);
 
         // Write the updated JSON back to the file
         fs.writeFile("public/database/player_finance.json", updatedJSON, (err) => {
@@ -55,12 +61,84 @@ app.post("/add_player", (req, res) => {
                 console.error("Error writing to file:", err);
                 return;
             }
-            console.log("Question appended successfully.");
+            console.log("SUCCES.");
+        });
+    });
+});
+
+//remove_player
+app.post("/remove_player", (req, res) => {
+    // Access the data sent from the client /the new question
+    const player_to_be_removed = req.body;
+
+    // Append quiz data to the current JSON file
+    fs.readFile("public/database/player_finance.json", "utf8", (err, data) => {
+        let player_data = [];
+        //Get the current data
+        player_data = JSON.parse(data);
+
+
+        player_data.payingPlayers.forEach((player, index) => {
+            if(player.dbu_name === player_to_be_removed.dbu_name){
+                player_data.payingPlayers.splice(index, 1)
+                console.log("complete");
+            }
+            
+        });
+        // Convert the updated data back to JSON format
+        const updatedJSON = JSON.stringify(player_data, null, 4); // 2 is for indentation for readability
+        console.log(updatedJSON);
+
+        // Write the updated JSON back to the file
+        fs.writeFile("public/database/player_finance.json", updatedJSON, (err) => {
+            if (err) {
+                console.error("Error writing to file:", err);
+                return;
+            }
+            console.log("SUCCES.");
+        });
+    });
+});
+
+//update_player
+app.post("/update_player", (req, res) => {
+    // Access the data sent from the client /the new question
+    const player_to_be_removed = req.body;
+
+    // Append quiz data to the current JSON file
+    fs.readFile("public/database/player_finance.json", "utf8", (err, data) => {
+        let player_data = [];
+        //Get the current data
+        player_data = JSON.parse(data);
+
+        console.log(player_to_be_removed.old_dbu_name);
+        player_data.payingPlayers.forEach((player,index) => {
+            if(player.dbu_name === player_to_be_removed.old_dbu_name){
+                player_data.payingPlayers[index].dbu_name = player_to_be_removed.dbu_name;
+                player_data.payingPlayers[index].mobilepay_name = player_to_be_removed.mobilepay_name;
+                player_data.payingPlayers[index].extra_fines.yellow_card = player_to_be_removed.yellow_card;
+                player_data.payingPlayers[index].extra_fines.red_card = player_to_be_removed.red_card;
+                player_data.payingPlayers[index].extra_fines.others.push(player_to_be_removed.others);
+                player_data.payingPlayers[index].extra_fines.others_price.push(player_to_be_removed.others);
+
+            }
+            
+        });
+        // Convert the updated data back to JSON format
+        const updatedJSON = JSON.stringify(player_data, null, 4); // 2 is for indentation for readability
+
+        // Write the updated JSON back to the file
+        fs.writeFile("public/database/player_finance.json", updatedJSON, (err) => {
+            if (err) {
+                console.error("Error writing to file:", err);
+                return;
+            }
+            console.log("SUCCES.");
         });
     });
 });
 
 
 app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
+    console.log(`Server listening on localhost ${PORT}`);
 });

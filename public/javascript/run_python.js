@@ -11,7 +11,6 @@ document.getElementById('executeButton').addEventListener('click', function() {
         })
         .catch(error => {
             console.error('Error executing Python script:', error);
-            alert('Failed to execute Python script.');
         });
 });
 
@@ -27,7 +26,7 @@ function loading_screen(status){
         text.style.textAlign = "center";
         text.style.width = "100%";
         text.style.top = "50%";
-        text.textContent = "Vent Venligst, Denne kode er skrevet af en Amatør";
+        text.innerHTML = "Vent Venligst, Denne kode er skrevet af en Amatør <br> Unlad at forlade siden indtil den er færdig";
         text.id="noob";
         document.body.appendChild(text);
     }

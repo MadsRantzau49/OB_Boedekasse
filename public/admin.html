@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Execute Python Script</title>
     <script defer src="/javascript/run_python.js"></script>
-    <script defer src="/javascript/remove_player.js"></script>
+    <script defer src="/javascript/add_player.js"></script>
+    <script defer src="/javascript/admin_dropdown.js"></script>
+    <script defer src="/javascript/edit_player.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,19 +21,22 @@
     </nav>
 
     <div class="add_player">
-        <input type="text" id="dbu_player_name" placeholder="fulde dbu navn">
-        <input type="text" id="mp_player_name" placeholder="fulde mobilepay navn">
+        <input type="text" id="dbu_player_name" placeholder="fulde dbu navn"> <br>
+        <input type="text" id="mp_player_name" placeholder="fulde mobilepay navn"> <br>
         <input type="button" id="submit_player" value="Opret Spiller">
     </div>
 
-    <div class="remove_player">
-        <input type="text" id="player_name" placeholder="spillernavn">
-        <button id="searchButton">Søg spillere (enter)</button>
+    <div id="edit_player" class="edit_player_class">
+        <label for="player_name">Vælg en spiller:</label> 
+        <select name="player_name" id="player_name"> 
+        </select>
+
+        <button id="search_player">Ændre spillers data/bøder</button>
 
     </div>
     
-    <div class="edit_fines">
-
+    <div class="messages">
+        <h1 id="message"></h1>
     </div>
 
 </body>

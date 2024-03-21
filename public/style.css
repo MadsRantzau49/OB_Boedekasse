@@ -122,7 +122,7 @@ body {
   
   /* Apply the animation to the h1 element */
   #noob {
-    animation: rotate 5s linear infinite; /* adjust timing and iteration as needed */
+    animation: rotate 10s linear infinite; /* adjust timing and iteration as needed */
   }
 
 
@@ -146,3 +146,7 @@ body {
   nav h3 a:hover {
     background-color: #555;
   }
+
+#message{
+  color: green;
+}
