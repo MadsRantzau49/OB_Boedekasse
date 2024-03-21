@@ -33,6 +33,32 @@ app.post('/execute-python', (req, res) => {
     });
 });
 
+//Upload quiz data into the database
+app.post("/add_player", (req, res) => {
+    // Access the data sent from the client /the new question
+    const new_player = req.body;
+
+    // Append quiz data to the current JSON file
+    fs.readFile("public/database/player_finance.json", "utf8", (err, data) => {
+        let player_data = []
+        //Get the current data
+        player_data = JSON.parse(data);
+        //Insert the current/old questions
+        player_data.quiz.push(new_player);
+
+        // Convert the updated data back to JSON format
+        const updatedJSON = JSON.stringify(questionsData, null, 4); // 2 is for indentation for readability
+
+        // Write the updated JSON back to the file
+        fs.writeFile("public/database/player_finance.json", updatedJSON, (err) => {
+            if (err) {
+                console.error("Error writing to file:", err);
+                return;
+            }
+            console.log("Question appended successfully.");
+        });
+    });
+});
 
 
 app.listen(PORT, () => {
