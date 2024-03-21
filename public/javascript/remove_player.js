@@ -1,19 +1,11 @@
 const start_search_button = document.getElementById("searchButton");
 const search_player = document.getElementById("player_name");
 
-const latest_search_local_storage = localStorage.getItem("latest_search");
-
-search_player.value = latest_search_local_storage;
-if(latest_search_local_storage !== null){
-    check_number_of_players_found(search_player)
-} 
-
 // Pass a reference to the function without invoking it
 start_search_button.addEventListener("click", function() {
     document.querySelectorAll("#errorSearching").forEach(element => element.remove());
     document.querySelectorAll(".playerData").forEach(element => element.remove());
 
-    save_latest_search(search_player);
     check_number_of_players_found(search_player);
 });
 
@@ -21,14 +13,9 @@ search_player.addEventListener("change", function() {
     document.querySelectorAll("#errorSearching").forEach(element => element.remove());
     document.querySelectorAll(".playerData").forEach(element => element.remove());
 
-    save_latest_search(search_player)
     check_number_of_players_found(search_player);
 });
 
-function save_latest_search(search_player){
-    localStorage.setItem("latest_search", search_player.value);
-
-}
 
 function check_number_of_players_found(search_player) {
     let player_counter = 0;
@@ -51,7 +38,8 @@ function check_number_of_players_found(search_player) {
             let error_searching = document.createElement("h5");
             error_searching.id = "errorSearching";
             if (player_counter === 1) {
-                search_player_function(search_player);
+                remove_player(search_player);
+                console.log("1 player found");
             } else if (player_counter < 1) {
                 error_searching.textContent="Ingen fundet, prøv igen."
                 search_player.parentNode.insertBefore(error_searching,search_player.nextSibling);
@@ -66,10 +54,7 @@ function check_number_of_players_found(search_player) {
         });
 }
 
-
-function search_player_function(search_player){
-    let matches_list = [];
-    let matches_played_number = 0;
+function remove_player(search_player){
     fetch('/database/matches.json')
         .then(response => {
             if (!response.ok) {
@@ -82,9 +67,7 @@ function search_player_function(search_player){
 
                 match.playerlist.forEach(player_name => {
                     if(player_name.toLowerCase().includes(search_player.value.toLowerCase())){
-                        matches_played_number++;
-                        let link = `https://www.dbu.dk/resultater/kamp/ ${match.matchID}_${match.season}/kampinfo`;
-                        matches_list.push(link);
+                        
                     }
                 });
 
@@ -126,23 +109,8 @@ function search_player_function(search_player){
                     row.appendChild(deposit);
 
                     const extraFinesList = document.createElement("td");
-                    const red_card = document.createElement("a");
-                    red_card.textContent="Røde kort: " + player.extra_fines["red card"];
-                    extraFinesList.appendChild(red_card);
-                    extraFinesList.appendChild(document.createElement("br"));
-
-                    const yellow_card = document.createElement("a");
-                    yellow_card.textContent="Gule kort " + player.extra_fines["yellow card"];
-                    extraFinesList.appendChild(yellow_card);
-                    extraFinesList.appendChild(document.createElement("br"));
-
-                    const extra_fines = document.createElement("a");
-                    extra_fines.textContent="Ekstra bøder " + player.extra_fines["others"][0];
-                    extraFinesList.appendChild(extra_fines);
-                    extraFinesList.appendChild(document.createElement("br"));
-
+                    extraFinesList.textContent = `Rødt kort: ${player.extra_fines['red card']}<br>Gult kort: ${player.extra_fines['yellow card']}<br>Andre ${player.extra_fines['others']}`;
                     row.appendChild(extraFinesList);
-
  
                     const match_participated_in = document.createElement("td");
             
