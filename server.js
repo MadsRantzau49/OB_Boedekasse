@@ -103,7 +103,7 @@ app.post("/remove_player", (req, res) => {
 //update_player
 app.post("/update_player", (req, res) => {
     // Access the data sent from the client /the new question
-    const player_to_be_removed = req.body;
+    const player_to_be_updated = req.body;
 
     // Append quiz data to the current JSON file
     fs.readFile("public/database/player_finance.json", "utf8", (err, data) => {
@@ -111,15 +111,15 @@ app.post("/update_player", (req, res) => {
         //Get the current data
         player_data = JSON.parse(data);
 
-        console.log(player_to_be_removed.old_dbu_name);
+        console.log(player_to_be_updated.old_dbu_name);
         player_data.payingPlayers.forEach((player,index) => {
-            if(player.dbu_name === player_to_be_removed.old_dbu_name){
-                player_data.payingPlayers[index].dbu_name = player_to_be_removed.dbu_name;
-                player_data.payingPlayers[index].mobilepay_name = player_to_be_removed.mobilepay_name;
-                player_data.payingPlayers[index].extra_fines.yellow_card = player_to_be_removed.yellow_card;
-                player_data.payingPlayers[index].extra_fines.red_card = player_to_be_removed.red_card;
-                player_data.payingPlayers[index].extra_fines.others.push(player_to_be_removed.others);
-                player_data.payingPlayers[index].extra_fines.others_price.push(player_to_be_removed.others);
+            if(player.dbu_name === player_to_be_updated.old_dbu_name){
+                player_data.payingPlayers[index].dbu_name = player_to_be_updated.dbu_name;
+                player_data.payingPlayers[index].mobilepay_name = player_to_be_updated.mobilepay_name;
+                player_data.payingPlayers[index].extra_fines.yellow_card = player_to_be_updated.yellow_card;
+                player_data.payingPlayers[index].extra_fines.red_card = player_to_be_updated.red_card;
+                player_data.payingPlayers[index].extra_fines.others.push(player_to_be_updated.others);
+                player_data.payingPlayers[index].extra_fines.others_price.push(player_to_be_updated.others_price);
 
             }
             

@@ -127,19 +127,24 @@ function search_player_function(search_player){
 
                     const extraFinesList = document.createElement("td");
                     const red_card = document.createElement("a");
-                    red_card.textContent="Røde kort: " + player.extra_fines["red card"];
+                    red_card.textContent="Røde kort: " + player.extra_fines.red_card;
                     extraFinesList.appendChild(red_card);
                     extraFinesList.appendChild(document.createElement("br"));
 
                     const yellow_card = document.createElement("a");
-                    yellow_card.textContent="Gule kort " + player.extra_fines["yellow card"];
+                    yellow_card.textContent="Gule kort " + player.extra_fines.yellow_card;
                     extraFinesList.appendChild(yellow_card);
                     extraFinesList.appendChild(document.createElement("br"));
 
-                    const extra_fines = document.createElement("a");
-                    extra_fines.textContent="Ekstra bøder " + player.extra_fines["others"][0];
-                    extraFinesList.appendChild(extra_fines);
-                    extraFinesList.appendChild(document.createElement("br"));
+                    const extra_fine_list = document.createElement("ul");
+
+                    player.extra_fines.others.forEach((description,index) => {
+                        let fine_description = document.createElement("li");
+                        fine_description.textContent = player.extra_fines.others[index] + ": " + player.extra_fines.others_price[index];
+                        extra_fine_list.appendChild(fine_description);
+                    });
+
+                    extraFinesList.appendChild(extra_fine_list);
 
                     row.appendChild(extraFinesList);
 

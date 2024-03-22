@@ -301,24 +301,49 @@
         },
         {
             "dbu_name": "test",
-            "mobilepay_name": "testtt",
+            "mobilepay_name": "testen",
             "Deposit": 0,
             "Dept": 0,
             "extra_fines": {
-                "red_card": "0",
-                "yellow_card": "0",
+                "red_card": "1",
+                "yellow_card": "2",
                 "others": [
                     "Glemt h\u00e5ndl\u00e6de",
                     "Selvm\u00e5l",
-                    "Afbud p\u00e5 dagen"
+                    "Afbud p\u00e5 dagen",
+                    "D\u00e5r",
+                    "Meget d\u00e5rlig til cs",
+                    "Jon bliver skadet efter 7 minutter"
                 ],
                 "others_price": [
                     12,
                     20,
-                    50
+                    50,
+                    "50",
+                    "20",
+                    "100"
                 ]
             },
-            "balance": 0
+            "balance": 200
+        },
+        {
+            "dbu_name": "Jon Vincent",
+            "mobilepay_name": "Jon Vincent Hellboe Hasselby",
+            "Deposit": 0,
+            "Dept": 0,
+            "extra_fines": {
+                "red_card": "10",
+                "yellow_card": "12",
+                "others": [
+                    "Hej",
+                    "For hurtigt skadet"
+                ],
+                "others_price": [
+                    "Hej",
+                    "50"
+                ]
+            },
+            "balance": 1600
         }
     ]
 }

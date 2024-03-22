@@ -110,6 +110,7 @@ searched_player_button.addEventListener("click",() => {
                 let create_fine = document.createElement("td");
                 let fine_description_input = document.createElement("input");
                 fine_description_input.type = "text";
+                fine_description_input.id = "fine_description";
                 fine_description_input.placeholder = "Beskrivelse";
                 create_fine.appendChild(fine_description_input);
                 row.appendChild(create_fine);
@@ -117,6 +118,7 @@ searched_player_button.addEventListener("click",() => {
                 let create_price = document.createElement("td");
                 let fine_price_input = document.createElement("input");
                 fine_price_input.type = "number";
+                fine_price_input.id = "fine_price";
                 fine_price_input.placeholder = "pris";
                 create_price.appendChild(fine_price_input);
                 row.appendChild(create_price);
@@ -170,8 +172,8 @@ function update_player(){
     let mp_name = document.getElementById("new_mp_name").value;
     let red = document.getElementById("new_red").value;
     let yellow = document.getElementById("new_yellow").value;
-    let others = document.getElementById("new_others").value;
-    let others_price = document.getElementById("new_others_price").value;
+    let others = document.getElementById("fine_description").value;
+    let others_price = document.getElementById("fine_price").value;
 
 
     // Create an object with the data
