@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             const latest_search_local_storage = localStorage.getItem("latest_search");
+            console.log(latest_search_local_storage);
                 
             const jsonDisplayDiv = document.getElementById('player_finance_table');
             data.payingPlayers.forEach(player => {
@@ -31,14 +32,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 row.appendChild(balance);
 
-                if(latest_search_local_storage !== null){
+                if (latest_search_local_storage) {
                     if (player.dbu_name.toLowerCase().includes(latest_search_local_storage.toLowerCase())) {
                         jsonDisplayDiv.insertBefore(row, jsonDisplayDiv.getElementsByTagName('tr')[1]);
-                    }
-                    else {
+                    } else {
                         jsonDisplayDiv.appendChild(row);
                     }
-                }                      
+                } else {
+                    jsonDisplayDiv.appendChild(row);
+                }                
             });
         })
         .catch(error => {

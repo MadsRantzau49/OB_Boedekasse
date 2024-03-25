@@ -344,6 +344,40 @@
                 ]
             },
             "balance": 1600
+        },
+        {
+            "dbu_name": "Anne",
+            "mobilepay_name": "sofiee elene sommer",
+            "Deposit": 0,
+            "Dept": 0,
+            "extra_fines": {
+                "red_card": "10",
+                "yellow_card": "23",
+                "others": [
+                    "Tisset i badet"
+                ],
+                "others_price": [
+                    "800"
+                ]
+            },
+            "balance": 2150
+        },
+        {
+            "dbu_name": "Markus Persson",
+            "mobilepay_name": "Markus Persson",
+            "Deposit": 0,
+            "Dept": 0,
+            "extra_fines": {
+                "red_card": "30",
+                "yellow_card": "1",
+                "others": [
+                    "For doven"
+                ],
+                "others_price": [
+                    "100"
+                ]
+            },
+            "balance": 3050
         }
     ]
 }
