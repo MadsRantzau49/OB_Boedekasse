@@ -113,7 +113,7 @@ function search_player_function(search_player){
                     row.appendChild(dbuName);
                     
                     const balance = document.createElement("td");
-                    balance.textContent = player.Deposit - player.Dept;
+                    balance.textContent = player.balance;
                     row.appendChild(balance);
 
 

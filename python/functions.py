@@ -12,6 +12,8 @@ matches_file_path = os.path.join(current_directory, '..', 'public', 'database', 
 player_finance_file_path = os.path.join(current_directory, '..', 'public', 'database', 'player_finance.json')
 trans_file_path = os.path.join(current_directory, '..', 'public', 'database', 'trans.csv')
 database_file_path = os.path.join(current_directory, '..', 'public', 'database')
+mobilepay_box_file_path = os.path.join(current_directory, '..', 'public', 'database', 'mobile_box_stats.json')
+
 
 
 #Find a time in the JSON file, input are the name type dbu_name or mobilepay_name
@@ -183,7 +185,11 @@ def reset_fines(players_list):
         for i in range(players_list):
             data["payingPlayers"][i]["Dept"] = 0
             data["payingPlayers"][i]["Deposit"] = 0
-            data["payingPlayers"][i]["balance"] = 0    
+            data["payingPlayers"][i]["balance"] = 0  
+
+            # reset all extra fines
+            # data["payingPlayers"][i]["extra_fines"]["others"] = []
+            # data["payingPlayers"][i]["extra_fines"]["others_price"] = []
 
             
 
@@ -253,11 +259,66 @@ def find_balance(yellow_card_fine,red_card_fine):
             red = int(data["payingPlayers"][i]["extra_fines"]["red_card"])
             yellow = int(data["payingPlayers"][i]["extra_fines"]["yellow_card"])
 
-            balance = dept - deposit + (red * red_card_fine) + (yellow * yellow_card_fine)
+            extra_fines = data["payingPlayers"][i]["extra_fines"]["others_price"]
+            if extra_fines:  # Check if the list is not empty
+                total_extra_fines = sum(map(int, extra_fines))
+            else:
+                total_extra_fines  = 0  # Set total_extra_fines to 0 if the list is empty
+
+            balance = deposit - dept - (red * red_card_fine) - (yellow * yellow_card_fine) - total_extra_fines
             data["payingPlayers"][i]["balance"] = balance
-
-
 
             ap.seek(0)  # Move the cursor to the beginning of the file
             json.dump(data, ap, indent=4)
             ap.truncate()  # Truncate the remaining data in the file
+
+
+def mobilepay_box(season_start):
+    balance = 0
+    send_money_to = []
+    send_money_amount = []
+    date = []
+    with open(trans_file_path,"r",encoding="utf-8") as ap:
+        mobilepay_box_data = csv.reader(ap)
+
+        #define the start season date to a datetime instead of string so it can be compared.
+        season_start = datetime.strptime(season_start, "%d/%m/%Y")
+        for row in mobilepay_box_data:
+            # Extract the date string from the CSV row
+            transfer_date_str = row[0].split(',')[0].strip()
+
+            # Convert the date string to a datetime object
+            transaction_date = datetime.strptime(transfer_date_str, "%d/%m/%Y %H:%M")
+
+            
+
+            if transaction_date > season_start:    
+                #Row[1] is name 
+                name = row[1]
+                #Row[3] is deposit number
+                deposit_number = int(row[3])
+                
+                #Row[0] is date
+                transfer_date = row[0]
+                balance += deposit_number
+                
+                if(deposit_number < 0):
+                    send_money_to.append(name)
+                    send_money_amount.append(deposit_number)
+                    print(transfer_date)
+                    date.append(transfer_date)
+
+    with open(mobilepay_box_file_path,"r+",encoding="utf-8") as ap:
+        data = json.load(ap)
+        data["box"][0]["balance"] = balance
+        data["box"][0]["send_money_to"] = send_money_to
+        data["box"][0]["send_money_amount"] = send_money_amount
+        data["box"][0]["date"] = date
+         # Move the file pointer to the beginning of the file before writing
+        ap.seek(0)
+        
+        # Write the updated data back to the file
+        json.dump(data, ap, indent=4)
+
+        # Truncate the file to the current file position to remove any extra data. because the file add some weird ]} in the end. 
+        ap.truncate()

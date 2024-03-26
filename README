@@ -11,16 +11,16 @@ Før publish:
 -Tilføj favorit, sådan man selv kommer op i toppen af dokumnetet ✅
 -Gør det online
 -Tilføj ekstra bøder ✅
--fjern ekstra bøder
+-fjern ekstra bøder ✅
 -Se bødekasse stats (økonomi osv)
 -Hent localstorage på startsiden sådan man burde komme op øverste spiller✅
 -spiller stats, få ekstra bøder til at se bedre ud.✅
--Password på admin
--Sammenkoble alle bøderne inde i opdater data funktionen. Sådan at balancen passer. 
+-Password på admin ✅
+-Sammenkoble alle bøderne inde i opdater data funktionen. Sådan at balancen passer. ✅
 
 
 nice features:
--Debug opdater data, sådan man ikke kan spam den (måske)
+-Debug opdater data, sådan man ikke kan spam den (måske)✅
 -Sortering af de forskellige tables. 
 -Hent mobilepay data'en selv. 
 -Progressbar op opdater_data (ingen ide om hvordan)

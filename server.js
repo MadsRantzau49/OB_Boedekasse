@@ -118,8 +118,8 @@ app.post("/update_player", (req, res) => {
                 player_data.payingPlayers[index].mobilepay_name = player_to_be_updated.mobilepay_name;
                 player_data.payingPlayers[index].extra_fines.yellow_card = player_to_be_updated.yellow_card;
                 player_data.payingPlayers[index].extra_fines.red_card = player_to_be_updated.red_card;
-                player_data.payingPlayers[index].extra_fines.others.push(player_to_be_updated.others);
-                player_data.payingPlayers[index].extra_fines.others_price.push(player_to_be_updated.others_price);
+                player_data.payingPlayers[index].extra_fines.others = player_to_be_updated.others;
+                player_data.payingPlayers[index].extra_fines.others_price = player_to_be_updated.others_price;
 
             }
             

@@ -13,34 +13,44 @@
 </head>
 <body>
     <nav>
-    <h3><a href="index.html">Holdet</a></h3>
-    <h3><a href="match.html">Kampe spillet</a></h3>
-    <h3><a href="player.html">Spiller Stats</a></h3>
-    <h3><a id="executeButton">Opdater data</a></h3>
-    <h3><a href="admin.html">admin</a></h3>
-    </nav>
-
-    <div class="add_player">
-        <input type="text" id="dbu_player_name" placeholder="fulde dbu navn"> <br>
-        <input type="text" id="mp_player_name" placeholder="fulde mobilepay navn"> <br>
-        <input type="button" id="submit_player" value="Opret Spiller">
-    </div>
-
-    <div id="edit_player" class="edit_player_class">
-        <label for="player_name">Vælg en spiller:</label> 
-        <select name="player_name" id="player_name"> 
-        </select>
-
-        <button id="search_player">Ændre spillers data/b</button>
-
-
-        </table>        
+        <h3><a href="index.html">Holdet</a></h3>
+        <h3><a href="match.html">Kampe spillet</a></h3>
+        <h3><a href="player.html">Spiller Stats</a></h3>
+        <h3><a id="executeButton">Opdater data</a></h3>
+        <h3><a href="admin.html">admin</a></h3>
+        </nav>
+    <div id="password_div">
+        <input type="text" id="password" ><br>
+        <input type="button" id="submit_password" value="Log in">
 
     </div>
-    
-    <div class="messages">
-        <h1 id="message"></h1>
+    <div id="admin_settings" style="display: none;">
+
+        
+
+        <div class="add_player">
+            <input type="text" id="dbu_player_name" placeholder="fulde dbu navn"> <br>
+            <input type="text" id="mp_player_name" placeholder="fulde mobilepay navn"> <br>
+            <input type="button" id="submit_player" value="Opret Spiller">
+        </div>
+
+        <div id="edit_player" class="edit_player_class">
+            <label for="player_name">Vælg en spiller:</label> 
+            <select name="player_name" id="player_name"> 
+            </select>
+
+            <button id="search_player">Ændre spillers data/bøder</button>
+
+
+            </table>        
+
+        </div>
+        
+        <div class="messages">
+            <h1 id="message"></h1>
+        </div>
     </div>
+
 
 </body>
 </html>
