@@ -139,6 +139,3 @@ app.post("/update_player", (req, res) => {
 });
 
 
-// app.listen(PORT, () => {
-//     console.log(`Server listening on localhost ${PORT}`);
-// });
