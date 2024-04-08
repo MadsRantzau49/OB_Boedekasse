@@ -122,10 +122,10 @@ def find_match_result(match_id,dbu_season_ID):
     today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
 
     # Compare dates
-    if matchDate >= today:
-        
+    if matchDate >= today:        
         return False
-    
+
+
 
     # Find all team lineup information
     match_result_info = soup.find_all("div", {"class": "sr--match--live-score--result"})
@@ -140,13 +140,18 @@ def find_match_result(match_id,dbu_season_ID):
 
     if "Øster Sundby" in lines[0]:
         # Extract scores for Øster Sundby B and the opponent
-        oster_sundby_score = int(lines[1])
-        opponent_score = int(lines[-2])
+        #check if its not a number it return False
+        if lines[1].isdigit():           
+            oster_sundby_score = int(lines[1])
+            opponent_score = int(lines[-2])
+        else:
+            return "postponed"
     else:
         oster_sundby_score = int(lines[-2])
         opponent_score = int(lines[1])
     # Storing scores in the desired format
     return  {'oester_sundby': oster_sundby_score, 'opponent': opponent_score}
+
 
 
 def calculate_fine(result,won_match,draw_match,lost_match,conceded_goal,scored_goal):

@@ -191,7 +191,7 @@ function change_player_data(){
     });
 }
 
-function create_fine_row(kat){
+function create_fine_row(){
 
     let fine_table = document.getElementById("extra_fines_table");
     let index = fine_table.rows[fine_table.rows.length - 2].id;
@@ -201,8 +201,7 @@ function create_fine_row(kat){
 
 
     let others = document.getElementById("fine_description").value;
-    let others_price = document.getElementById("fine_price").value;
-
+    let others_price = document.getElementById("fine_price").value.trim();
     let row = document.createElement("tr");
     row.id="row"+index;
     row.className = "row_for_extra_fines";
@@ -212,7 +211,9 @@ function create_fine_row(kat){
     row.appendChild(fine_description_element);
 
     let fine_price_element = document.createElement("td");
-    fine_price_element.textContent = others_price;
+    fine_price_element.textContent = others_price === "" ? 0 : others_price;
+    console.log(fine_price_element.textContent);
+
     row.appendChild(fine_price_element);
 
     let delete_fine = document.createElement("td");

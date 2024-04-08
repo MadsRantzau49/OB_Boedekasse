@@ -10,9 +10,26 @@
         {
             "season": "427115",
             "matchID": "894711",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "playerlist": [
+                "Mads Rantzau Nielsen",
+                "Jannik L\u00e4gel Johansson",
+                "Lasse Christensen",
+                "Jakob Juul",
+                "Kristian Pedersen",
+                "Martin B\u00f8gh Eliasen",
+                "Poul S\u00f8nderup",
+                "David Nielsen",
+                "William Marin Vedde",
+                "Marc Storm Andersen",
+                "Mikkel Boddum Dahl",
+                "Magnus Smed",
+                "Jacob Winneche"
+            ],
+            "fine": 19,
+            "match_result": {
+                "oester_sundby": 2,
+                "opponent": 1
+            }
         },
         {
             "season": "427115",

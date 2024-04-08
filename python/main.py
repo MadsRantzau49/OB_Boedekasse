@@ -6,7 +6,7 @@ from functions import *
 # season = "409842"
 dbu_match_ID_list = ["894708","894711","894714","894714","894809","895540","895598","895603","895544","895606","895609","895628","895632","896193","896199"]
 season = "427115"
-season_start = "13/03/2020"
+season_start = "01/04/2024"
 
 won_match = 10
 draw_match = 20
@@ -37,6 +37,8 @@ for match in dbu_match_ID_list:
     match_result = find_match_result(match,season)
     if match_result == False:
         break
+    elif match_result == "postponed":
+        continue
     fine = calculate_fine(match_result,won_match,draw_match,lost_match,conceded_goal,scored_goal)
     team_lineup_in_match = find_team_lineup(match,season)
     playerlist = who_played_the_game(dbu_names,team_lineup_in_match)
