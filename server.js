@@ -6,7 +6,7 @@ const fs = require("fs");
 
 
 const app = express();
-const PORT = 3000;
+const PORT = 10000;
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
@@ -139,6 +139,6 @@ app.post("/update_player", (req, res) => {
 });
 
 
-app.listen(PORT, () => {
-    console.log(`Server listening on localhost ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server listening on localhost ${PORT}`);
+// });
