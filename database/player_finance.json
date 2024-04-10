@@ -19,8 +19,8 @@
             "Deposit": 19,
             "Dept": 19,
             "extra_fines": {
-                "yellow_card": 0,
-                "red_card": 0,
+                "yellow_card": "0",
+                "red_card": "0",
                 "others": [],
                 "others_price": []
             },

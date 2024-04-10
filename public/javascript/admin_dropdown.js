@@ -14,6 +14,7 @@ async function fetchData(file) {
 
 async function dropdown(){
     let data = await fetchData("player-finance");
+    console.log(data)
     data.payingPlayers.forEach(player => {
         add_option(player.dbu_name);
     });
