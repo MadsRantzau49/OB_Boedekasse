@@ -6,7 +6,7 @@ const fs = require("fs");
 
 
 const app = express();
-const PORT = 5000;
+const PORT = 10000;
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
