@@ -13,6 +13,9 @@ function execute_python_script(){
             toggle_nav_bar("end");
         } else {
             console.log('Failed to execute Python script.');
+            loading_screen("end");
+            toggle_nav_bar("end");
+            alert("FAILED");
         }
     })
     .catch(error => {
