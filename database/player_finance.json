@@ -14,8 +14,8 @@
             "balance": 0
         },
         {
-            "dbu_name": "Jannik Lägel Johansson",
-            "mobilepay_name": "Jannik Lägel Johansson",
+            "dbu_name": "Jannik L\u00e4gel Johansson",
+            "mobilepay_name": "Jannik L\u00e4gel Johansson",
             "Deposit": 19,
             "Dept": 19,
             "extra_fines": {
@@ -92,8 +92,8 @@
             "balance": 0
         },
         {
-            "dbu_name": "Martin Bøgh Eliasen",
-            "mobilepay_name": "Martin Bøgh Eliasen",
+            "dbu_name": "Martin B\u00f8gh Eliasen",
+            "mobilepay_name": "Martin B\u00f8gh Eliasen",
             "Deposit": 0,
             "Dept": 19,
             "extra_fines": {
@@ -105,8 +105,8 @@
             "balance": -19
         },
         {
-            "dbu_name": "Poul Sønderup",
-            "mobilepay_name": "Poul Lynggaard Sønderup",
+            "dbu_name": "Poul S\u00f8nderup",
+            "mobilepay_name": "Poul Lynggaard S\u00f8nderup",
             "Deposit": 0,
             "Dept": 19,
             "extra_fines": {
@@ -196,8 +196,8 @@
             "balance": 0
         },
         {
-            "dbu_name": "Ryan Nørgaard",
-            "mobilepay_name": "Ryan Nørgaard",
+            "dbu_name": "Ryan N\u00f8rgaard",
+            "mobilepay_name": "Ryan N\u00f8rgaard",
             "Deposit": 0,
             "Dept": 0,
             "extra_fines": {

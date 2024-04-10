@@ -8,11 +8,11 @@ import re
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
-matches_file_path = os.path.join(current_directory, '..', 'public', 'database', 'matches.json')
-player_finance_file_path = os.path.join(current_directory, '..', 'public', 'database', 'player_finance.json')
-trans_file_path = os.path.join(current_directory, '..', 'public', 'database', 'trans.csv')
-database_file_path = os.path.join(current_directory, '..', 'public', 'database')
-mobilepay_box_file_path = os.path.join(current_directory, '..', 'public', 'database', 'mobile_box_stats.json')
+matches_file_path = os.path.join(current_directory, '..', 'database', 'matches.json')
+player_finance_file_path = os.path.join(current_directory, '..', 'database', 'player_finance.json')
+trans_file_path = os.path.join(current_directory, '..', 'database', 'trans.csv')
+database_file_path = os.path.join(current_directory, '..', 'database')
+mobilepay_box_file_path = os.path.join(current_directory, '..', 'database', 'mobile_box_stats.json')
 
 
 
