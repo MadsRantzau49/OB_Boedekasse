@@ -20,6 +20,9 @@ function execute_python_script(){
     })
     .catch(error => {
         console.error('Error executing Python script:', error);
+        loading_screen("end");
+        toggle_nav_bar("end");
+        alert("FAILED");
     });
 }
 
