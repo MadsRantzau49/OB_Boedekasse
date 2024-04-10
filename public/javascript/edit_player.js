@@ -172,7 +172,6 @@ async function change_player_data(){
             save_changes_button.textContent ="Gem ændringer";
             save_changes_button.addEventListener("click", function() {
                 update_player();
-                execute_python_script();
             });
             save_changes_button.className = "labels_and_input";
 
