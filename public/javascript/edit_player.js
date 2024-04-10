@@ -170,7 +170,10 @@ async function change_player_data(){
             let save_changes_button = document.createElement("button");
             save_changes_button.id = "save_changes_button";
             save_changes_button.textContent ="Gem ændringer";
-            save_changes_button.addEventListener("click", update_player);
+            save_changes_button.addEventListener("click", function() {
+                update_player();
+                execute_python_script();
+            });
             save_changes_button.className = "labels_and_input";
 
             edit_div.appendChild(save_changes_button);
@@ -241,6 +244,7 @@ function delete_row(index){
 
 
 function update_player(){
+    
     let old_dbu_name = document.getElementById("player_name").value;
 
     let dbu_name = document.getElementById("new_dbu_name").value;
@@ -256,8 +260,6 @@ function update_player(){
         others.push(tds[0].textContent);
         others_price.push(tds[1].textContent)
     });
-
-
 
     // Create an object with the data
     const data = {
