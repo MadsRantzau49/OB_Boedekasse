@@ -98,6 +98,11 @@ async function search_player_function(search_player){
             
             const balance = document.createElement("td");
             balance.textContent = player.balance;
+            if (parseInt(player.balance) < 0){
+                balance.style.color = "red";
+            } else {
+                balance.style.color = "green";
+            }
             row.appendChild(balance);
 
 
