@@ -11,5 +11,6 @@
   "main": "run_python.js",
   "keywords": [],
   "author": "",
+  "bun": "1.1.0",
   "license": "ISC"
 }
