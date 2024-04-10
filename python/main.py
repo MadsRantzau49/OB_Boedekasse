@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/opt/render/.local/bin/python3
 
 from functions import *
 

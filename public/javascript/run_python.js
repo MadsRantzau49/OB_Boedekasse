@@ -2,10 +2,10 @@ let execute_button = document.getElementById("executeButton");
 
 execute_button.addEventListener('click', execute_python_script);
 
-function execute_python_script(){
+async function execute_python_script(){
     loading_screen("start");
     toggle_nav_bar("start");
-    fetch('/execute-python', { method: 'POST' })
+    await fetch('/execute-python', { method: 'POST' })
     .then(response => {
         if (response.ok) {
             console.log('Python script executed successfully!');
@@ -13,11 +13,19 @@ function execute_python_script(){
             toggle_nav_bar("end");
         } else {
             console.log('Failed to execute Python script.');
+            loading_screen("end");
+            toggle_nav_bar("end");
+            alert("FAILED");
         }
     })
     .catch(error => {
         console.error('Error executing Python script:', error);
+        loading_screen("end");
+        toggle_nav_bar("end");
+        alert("FAILED");
     });
+    loading_screen("end");
+    toggle_nav_bar("end");
 }
 
 function toggle_nav_bar(status){

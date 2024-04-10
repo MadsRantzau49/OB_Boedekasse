@@ -8,11 +8,11 @@ import re
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
-matches_file_path = os.path.join(current_directory, '..', 'public', 'database', 'matches.json')
-player_finance_file_path = os.path.join(current_directory, '..', 'public', 'database', 'player_finance.json')
-trans_file_path = os.path.join(current_directory, '..', 'public', 'database', 'trans.csv')
-database_file_path = os.path.join(current_directory, '..', 'public', 'database')
-mobilepay_box_file_path = os.path.join(current_directory, '..', 'public', 'database', 'mobile_box_stats.json')
+matches_file_path = os.path.join(current_directory, '..', 'database', 'matches.json')
+player_finance_file_path = os.path.join(current_directory, '..', 'database', 'player_finance.json')
+trans_file_path = os.path.join(current_directory, '..', 'database', 'trans.csv')
+database_file_path = os.path.join(current_directory, '..', 'database')
+mobilepay_box_file_path = os.path.join(current_directory, '..', 'database', 'mobile_box_stats.json')
 
 
 
@@ -137,18 +137,21 @@ def find_match_result(match_id,dbu_season_ID):
 
     # Split the string into lines
     lines = match_result_text.split('\n')
-
+    print(lines)
     if "Øster Sundby" in lines[0]:
         # Extract scores for Øster Sundby B and the opponent
         #check if its not a number it return False
         if lines[1].isdigit():           
-            oster_sundby_score = int(lines[1])
-            opponent_score = int(lines[-2])
+            oster_sundby_score = int(lines[2])
+            opponent_score = int(lines[-3])
         else:
             return "postponed"
     else:
-        oster_sundby_score = int(lines[-2])
-        opponent_score = int(lines[1])
+        if lines[-3].isdigit():
+            oster_sundby_score = int(lines[-3])
+            opponent_score = int(lines[2])
+        else:
+            return "postponed"
     # Storing scores in the desired format
     return  {'oester_sundby': oster_sundby_score, 'opponent': opponent_score}
 
@@ -240,7 +243,7 @@ def update_player_deposit(playerlist,dbu_season_start_date):
                 #Row[1] is name 
                 name = row[1]
                 #Row[3] is deposit number
-                deposit_number = int(row[3])
+                deposit_number = int(row[5])
 
                 for i in range(len(playerlist)):
                     player = playerlist[i]
@@ -252,7 +255,6 @@ def update_player_deposit(playerlist,dbu_season_start_date):
                             json.dump(data, ap, indent=4)
                             ap.truncate()  # Truncate the remaining data in the file
                             break
-
 
 def find_balance(yellow_card_fine,red_card_fine):
     with open(player_finance_file_path,"r+",encoding="utf-8") as ap:
@@ -279,7 +281,8 @@ def find_balance(yellow_card_fine,red_card_fine):
 
 
 def mobilepay_box(season_start):
-    balance = 0
+    #The total balance before season
+    balance = 19
     send_money_to = []
     send_money_amount = []
     date = []
@@ -301,7 +304,7 @@ def mobilepay_box(season_start):
                 #Row[1] is name 
                 name = row[1]
                 #Row[3] is deposit number
-                deposit_number = int(row[3])
+                deposit_number = int(row[5])
                 
                 #Row[0] is date
                 transfer_date = row[0]

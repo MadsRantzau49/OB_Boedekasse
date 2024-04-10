@@ -1,11 +1,19 @@
-fetch('/database/player_finance.json')
-.then(response => {
-    if (!response.ok) {
-        throw new Error('Network response was not ok');
+async function fetchData(file) {
+    try {
+      const response = await fetch("/api/"+file);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      return data;
+      // Use the data to display your quiz
+    } catch (error) {
+      console.error("Error fetching quiz data:", error);
     }
-    return response.json();
-})
-.then(data => {
+}
+
+async function player_eco(){
+    let data = await fetchData("player-finance");
     const latest_search_local_storage = localStorage.getItem("latest_search");
     console.log(latest_search_local_storage);
         
@@ -38,22 +46,11 @@ fetch('/database/player_finance.json')
             jsonDisplayDiv.appendChild(row);
         }                
     });
-})
-.catch(error => {
-    console.error('There was a problem fetching the JSON file:', error);
-});
+}
+player_eco();
 
-
-
-//mobilebox data
-fetch('/database/mobile_box_stats.json')
-.then(response => {
-    if (!response.ok) {
-        throw new Error('Network response was not ok');
-    }
-    return response.json();
-})
-.then(data => {
+async function mobileData(){
+    let data = await fetchData("mobile-box");
     let mp_name = document.getElementById("mp_box_name");
     mp_name.textContent = "Navn: " + data.box[0].name;
 
@@ -81,7 +78,5 @@ fetch('/database/mobile_box_stats.json')
         
         table.appendChild(row);
     });
-})
-.catch(error => {
-    console.error('There was a problem fetching the JSON file:', error);
-});
+}
+mobileData();
