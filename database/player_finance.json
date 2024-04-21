@@ -272,6 +272,19 @@
                 "others_price": []
             },
             "balance": -94
+        },
+        {
+            "dbu_name": "Victor Birkemose",
+            "mobilepay_name": "Victor Birkemose",
+            "Deposit": 0,
+            "Dept": 0,
+            "extra_fines": {
+                "red_card": "0",
+                "yellow_card": "0",
+                "others": [],
+                "others_price": []
+            },
+            "balance": 0
         }
     ]
 }
