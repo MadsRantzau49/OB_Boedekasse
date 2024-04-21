@@ -63,6 +63,7 @@ app.post('/execute-python', (req, res) => {
 
 
   exec(`/opt/render/project/src/myenv/bin/python3 /opt/render/project/src/python/main.py`, (error, stdout, stderr) => {
+    // exec(`python ${pythonScriptPath}`, (error, stdout, stderr) => {
       if (error) {
           console.error(`Error executing Python script: ${error}`);
           res.status(500).send('Error executing Python script');

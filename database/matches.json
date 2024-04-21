@@ -34,23 +34,47 @@
         {
             "season": "427115",
             "matchID": "894714",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
-        },
-        {
-            "season": "427115",
-            "matchID": "894714",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "playerlist": [
+                "Mads Rantzau Nielsen",
+                "Jannik L\u00e4gel Johansson",
+                "Lasse Christensen",
+                "Jakob Juul",
+                "Kristian Pedersen",
+                "Poul S\u00f8nderup",
+                "Mikkel Vangsted",
+                "Michael Buus",
+                "David Nielsen",
+                "Marc Storm Andersen",
+                "Mikkel Boddum Dahl",
+                "Magnus Smed",
+                "Jacob Winneche"
+            ],
+            "fine": 34,
+            "match_result": {
+                "oester_sundby": 2,
+                "opponent": 2
+            }
         },
         {
             "season": "427115",
             "matchID": "894809",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "playerlist": [
+                "Mads Rantzau Nielsen",
+                "Jannik L\u00e4gel Johansson",
+                "Lasse Christensen",
+                "Kristian Pedersen",
+                "Mikkel Vangsted",
+                "Michael Buus",
+                "William Marin Vedde",
+                "Marc Storm Andersen",
+                "Mikkel Boddum Dahl",
+                "Jacob Winneche"
+            ],
+            "fine": 41,
+            "match_result": {
+                "oester_sundby": 3,
+                "opponent": 3
+            }
         },
         {
             "season": "427115",
@@ -111,6 +135,13 @@
         {
             "season": "427115",
             "matchID": "896193",
+            "playerlist": [],
+            "fine": "",
+            "match_result": []
+        },
+        {
+            "season": "427115",
+            "matchID": "896199",
             "playerlist": [],
             "fine": "",
             "match_result": []

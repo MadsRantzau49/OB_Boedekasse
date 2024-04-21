@@ -4,7 +4,7 @@ from functions import *
 
 # dbu_match_ID_list = ["193827","193831","193834","193840","193845","193847","201625","201750","201753","202852","202855","202857"]
 # season = "409842"
-dbu_match_ID_list = ["894708","894711","894714","894714","894809","895540","895598","895603","895544","895606","895609","895628","895632","896193","896199"]
+dbu_match_ID_list = ["894708","894711","894714","894809","895540","895598","895603","895544","895606","895609","895628","895632","896193","896199"]
 season = "427115"
 season_start = "01/04/2024"
 
@@ -38,7 +38,9 @@ for match in dbu_match_ID_list:
     if match_result == False:
         break
     elif match_result == "postponed":
+        print("postponed")
         continue
+    print("videre")
     fine = calculate_fine(match_result,won_match,draw_match,lost_match,conceded_goal,scored_goal)
     team_lineup_in_match = find_team_lineup(match,season)
     playerlist = who_played_the_game(dbu_names,team_lineup_in_match)

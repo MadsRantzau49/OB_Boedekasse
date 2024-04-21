@@ -122,7 +122,7 @@ def find_match_result(match_id,dbu_season_ID):
     today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
 
     # Compare dates
-    if matchDate >= today:        
+    if matchDate > today:        
         return False
 
 
@@ -141,7 +141,7 @@ def find_match_result(match_id,dbu_season_ID):
     if "Øster Sundby" in lines[0]:
         # Extract scores for Øster Sundby B and the opponent
         #check if its not a number it return False
-        if lines[1].isdigit():           
+        if lines[2].isdigit():           
             oster_sundby_score = int(lines[2])
             opponent_score = int(lines[-3])
         else:
