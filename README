@@ -5,14 +5,14 @@ Før publish:
 -Se matches ✅
 -Lav waiting screen for python script evt med noob har skrevet det så vent venligst ✅
 -Se hvor man har fået sine bøder / spiller stats✅
--Se reglerne
+-Se reglerne✅
 -Tilføj spiller✅
 -Fjern spiller✅
 -Tilføj favorit, sådan man selv kommer op i toppen af dokumnetet ✅
--Gør det online
+-Gør det online✅
 -Tilføj ekstra bøder ✅
 -fjern ekstra bøder ✅
--Se bødekasse stats (økonomi osv)
+-Se bødekasse stats (økonomi osv)✅
 -Hent localstorage på startsiden sådan man burde komme op øverste spiller✅
 -spiller stats, få ekstra bøder til at se bedre ud.✅
 -Password på admin ✅
@@ -22,10 +22,12 @@ Før publish:
 nice features:
 -Debug opdater data, sådan man ikke kan spam den (måske)✅
 -Sortering af de forskellige tables. 
--Hent mobilepay data'en selv. 
+-Hent mobilepay data'en selv. (evt bare gør sådan man kan uploade filen derinde ;D)
+-Gør sådan man ikke skal slet række 1 og fjerne kommentarer på mobilepay filen
 -Progressbar op opdater_data (ingen ide om hvordan)
 -Se hvilke kampe der er givet kort
 -Se hvilke dage der er givet ekstra bøder
 -Lav vælg en spiller på admin til en søge option også
 -Gør koden bedre sådan det ikke tager 100 år. 
--QR kode til at overføre det man mangler
+-QR kode til at overføre det man mangler✅
+-Gør det lækkert style mæssigt
