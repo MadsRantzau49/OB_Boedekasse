@@ -3,93 +3,93 @@
         {
             "dbu_name": "Mads Rantzau Nielsen",
             "mobilepay_name": "Mads Rantzau Nielsen",
-            "Deposit": 19,
-            "Dept": 94,
+            "Deposit": 157,
+            "Dept": 157,
             "extra_fines": {
                 "red_card": "0",
                 "yellow_card": "0",
                 "others": [],
                 "others_price": []
             },
-            "balance": -75
+            "balance": 0
         },
         {
             "dbu_name": "Jannik L\u00e4gel Johansson",
             "mobilepay_name": "Jannik L\u00e4gel Johansson",
             "Deposit": 19,
-            "Dept": 94,
+            "Dept": 185,
             "extra_fines": {
                 "yellow_card": "0",
                 "red_card": "0",
                 "others": [],
                 "others_price": []
             },
-            "balance": -75
+            "balance": -166
         },
         {
             "dbu_name": "Markus Bruun Jakobsen",
             "mobilepay_name": "Markus Bruun Jakobsen",
             "Deposit": 0,
-            "Dept": 0,
+            "Dept": 69,
             "extra_fines": {
                 "yellow_card": "0",
                 "red_card": "0",
                 "others": [],
                 "others_price": []
             },
-            "balance": 0
+            "balance": -69
         },
         {
             "dbu_name": "Andreas Ahrenfeldt Laursen",
             "mobilepay_name": "Andreas Ahrenfeldt Laursen",
             "Deposit": 0,
-            "Dept": 0,
+            "Dept": 28,
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
                 "others": [],
                 "others_price": []
             },
-            "balance": 0
+            "balance": -28
         },
         {
             "dbu_name": "Lasse Christensen",
             "mobilepay_name": "Lasse Christensen",
             "Deposit": 19,
-            "Dept": 94,
+            "Dept": 185,
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
                 "others": [],
                 "others_price": []
             },
-            "balance": -75
+            "balance": -166
         },
         {
             "dbu_name": "Jakob Juul",
             "mobilepay_name": "Jakob Sejer Juul",
-            "Deposit": 19,
-            "Dept": 53,
+            "Deposit": 119,
+            "Dept": 144,
             "extra_fines": {
                 "yellow_card": "1",
                 "red_card": "0",
                 "others": [],
                 "others_price": []
             },
-            "balance": -84
+            "balance": -75
         },
         {
             "dbu_name": "Kristian Pedersen",
             "mobilepay_name": "Kristian Pedersen",
             "Deposit": 19,
-            "Dept": 94,
+            "Dept": 185,
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
                 "others": [],
                 "others_price": []
             },
-            "balance": -75
+            "balance": -166
         },
         {
             "dbu_name": "Martin B\u00f8gh Eliasen",
@@ -108,14 +108,14 @@
             "dbu_name": "Poul S\u00f8nderup",
             "mobilepay_name": "Poul Lynggaard S\u00f8nderup",
             "Deposit": 0,
-            "Dept": 53,
+            "Dept": 144,
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
                 "others": [],
                 "others_price": []
             },
-            "balance": -53
+            "balance": -144
         },
         {
             "dbu_name": "Mikkel Vangsted",
@@ -134,14 +134,14 @@
             "dbu_name": "Michael Buus",
             "mobilepay_name": "Michael Buus",
             "Deposit": 0,
-            "Dept": 75,
+            "Dept": 103,
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
                 "others": [],
                 "others_price": []
             },
-            "balance": -75
+            "balance": -103
         },
         {
             "dbu_name": "David Nielsen",
@@ -212,14 +212,14 @@
             "dbu_name": "William Marin Vedde",
             "mobilepay_name": "William Marin Vedde",
             "Deposit": 0,
-            "Dept": 60,
+            "Dept": 123,
             "extra_fines": {
                 "yellow_card": 0,
                 "red_card": 0,
                 "others": [],
                 "others_price": []
             },
-            "balance": -60
+            "balance": -123
         },
         {
             "dbu_name": "Marc Storm Andersen",
@@ -238,53 +238,53 @@
             "dbu_name": "Mikkel Boddum Dahl",
             "mobilepay_name": "Mikkel Boddum Dahl",
             "Deposit": 19,
-            "Dept": 94,
+            "Dept": 185,
             "extra_fines": {
                 "red_card": 0,
                 "yellow_card": 0,
                 "others": [],
                 "others_price": []
             },
-            "balance": -75
+            "balance": -166
         },
         {
             "dbu_name": "Magnus Smed",
             "mobilepay_name": "Magnus Smed",
             "Deposit": 0,
-            "Dept": 53,
+            "Dept": 144,
             "extra_fines": {
                 "red_card": 0,
                 "yellow_card": 0,
                 "others": [],
                 "others_price": []
             },
-            "balance": -53
+            "balance": -144
         },
         {
             "dbu_name": "Jacob Winneche",
             "mobilepay_name": "Jacob Winneche",
             "Deposit": 0,
-            "Dept": 94,
+            "Dept": 157,
             "extra_fines": {
                 "red_card": "0",
                 "yellow_card": "0",
                 "others": [],
                 "others_price": []
             },
-            "balance": -94
+            "balance": -157
         },
         {
             "dbu_name": "Victor Birkemose",
             "mobilepay_name": "Victor Birkemose",
             "Deposit": 0,
-            "Dept": 75,
+            "Dept": 138,
             "extra_fines": {
                 "red_card": "0",
                 "yellow_card": "0",
                 "others": [],
                 "others_price": []
             },
-            "balance": -75
+            "balance": -138
         }
     ]
 }

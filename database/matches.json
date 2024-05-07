@@ -4,8 +4,8 @@
             "season": "427115",
             "matchID": "894708",
             "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "match_result": [],
+            "fine": ""
         },
         {
             "season": "427115",
@@ -25,11 +25,11 @@
                 "Magnus Smed",
                 "Jacob Winneche"
             ],
-            "fine": 19,
             "match_result": {
                 "oester_sundby": 2,
                 "opponent": 1
-            }
+            },
+            "fine": 19
         },
         {
             "season": "427115",
@@ -50,11 +50,11 @@
                 "Jacob Winneche",
                 "Victor Birkemose"
             ],
-            "fine": 34,
             "match_result": {
                 "oester_sundby": 2,
                 "opponent": 2
-            }
+            },
+            "fine": 34
         },
         {
             "season": "427115",
@@ -62,6 +62,7 @@
             "playerlist": [
                 "Mads Rantzau Nielsen",
                 "Jannik L\u00e4gel Johansson",
+                "Markus Bruun Jakobsen",
                 "Lasse Christensen",
                 "Kristian Pedersen",
                 "Mikkel Vangsted",
@@ -72,39 +73,53 @@
                 "Jacob Winneche",
                 "Victor Birkemose"
             ],
-            "fine": 41,
             "match_result": {
                 "oester_sundby": 3,
                 "opponent": 3
-            }
+            },
+            "fine": 41
         },
         {
             "season": "427115",
             "matchID": "895540",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "playerlist": [
+                "Jannik L\u00e4gel Johansson",
+                "Markus Bruun Jakobsen",
+                "Andreas Ahrenfeldt Laursen",
+                "Lasse Christensen",
+                "Jakob Juul",
+                "Kristian Pedersen",
+                "Poul S\u00f8nderup",
+                "Michael Buus",
+                "Mikkel Boddum Dahl",
+                "Magnus Smed"
+            ],
+            "match_result": {
+                "oester_sundby": 4,
+                "opponent": 2
+            },
+            "fine": 28
         },
         {
             "season": "427115",
             "matchID": "895598",
             "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "match_result": [],
+            "fine": ""
         },
         {
             "season": "427115",
             "matchID": "895603",
             "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "match_result": [],
+            "fine": ""
         },
         {
             "season": "427115",
             "matchID": "895544",
             "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "match_result": [],
+            "fine": ""
         },
         {
             "season": "427115",
@@ -149,11 +164,26 @@
             "match_result": []
         },
         {
-            "season": "427115",
-            "matchID": "896199",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "season": "427339",
+            "matchID": "407063",
+            "playerlist": [
+                "Mads Rantzau Nielsen",
+                "Jannik L\u00e4gel Johansson",
+                "Lasse Christensen",
+                "Jakob Juul",
+                "Kristian Pedersen",
+                "Poul S\u00f8nderup",
+                "William Marin Vedde",
+                "Mikkel Boddum Dahl",
+                "Magnus Smed",
+                "Jacob Winneche",
+                "Victor Birkemose"
+            ],
+            "match_result": {
+                "oester_sundby": 4,
+                "opponent": 5
+            },
+            "fine": 63
         }
     ]
 }

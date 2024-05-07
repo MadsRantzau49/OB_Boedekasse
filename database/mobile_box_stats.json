@@ -3,10 +3,16 @@
         {
             "name": "\u00d8B bajerpension",
             "number": "1783QN",
-            "balance": 133,
-            "send_money_to": [],
-            "send_money_amount": [],
-            "date": []
+            "balance": 174,
+            "send_money_to": [
+                "Mads Rantzau Nielsen"
+            ],
+            "send_money_amount": [
+                -250
+            ],
+            "date": [
+                "07/05/2024 11:37"
+            ]
         }
     ]
 }

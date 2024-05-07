@@ -72,6 +72,36 @@ def add_matches_to_database(matches_list,season):
         ap.truncate()
 
 
+def add_match_to_database(match_id, season, index):
+    with open(matches_file_path, "r+", encoding="utf-8") as file:
+        data = json.load(file)
+        
+        # Create a new match entry
+        new_match = {
+            "season": season,
+            "matchID": match_id,
+            "playerlist": [],
+            "match_result": [],
+            "fine": ""
+        }
+
+        # Insert the new match at the specified index
+        data["matches"][index] = new_match
+        
+        # Move the file pointer to the beginning of the file before writing
+        file.seek(0)
+        
+        # Write the updated data back to the file
+        json.dump(data, file, indent=4)
+        
+        # Truncate the file to the current file position to remove any extra data because the file adds some weird ]} at the end.
+        file.truncate()
+
+# Example usage:
+add_match_to_database("ABC123", "2024", 0)  # Insert at index 0
+
+
+
 def who_played_the_game(playerlist,match_HTML):
     player_played = []
     for player in playerlist:
@@ -244,6 +274,10 @@ def update_player_deposit(playerlist,dbu_season_start_date):
                 name = row[1]
                 #Row[3] is deposit number
                 deposit_number = int(row[5])
+                if deposit_number < 0:
+                    print(deposit_number,name)
+                    continue
+                print(name)
 
                 for i in range(len(playerlist)):
                     player = playerlist[i]
@@ -313,7 +347,6 @@ def mobilepay_box(season_start):
                 if(deposit_number < 0):
                     send_money_to.append(name)
                     send_money_amount.append(deposit_number)
-                    print(transfer_date)
                     date.append(transfer_date)
 
     with open(mobilepay_box_file_path,"r+",encoding="utf-8") as ap:
