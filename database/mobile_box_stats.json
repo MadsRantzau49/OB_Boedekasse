@@ -3,14 +3,23 @@
         {
             "name": "\u00d8B bajerpension",
             "number": "1783QN",
-            "balance": 174,
+            "balance": 516,
             "send_money_to": [
+                "Gudumholm Idr\u00e6tsforening, Cafe",
+                "Gudumholm Idr\u00e6tsforening, Cafe",
+                "Gebyr",
                 "Mads Rantzau Nielsen"
             ],
             "send_money_amount": [
+                -65,
+                -210,
+                -19,
                 -250
             ],
             "date": [
+                "15/05/2024 20:41",
+                "15/05/2024 20:25",
+                "08/05/2024 22:31",
                 "07/05/2024 11:37"
             ]
         }
