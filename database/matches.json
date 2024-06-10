@@ -194,23 +194,71 @@
         {
             "season": "427115",
             "matchID": "895609",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "playerlist": [
+                "Mads Rantzau Nielsen",
+                "Jannik L\u00e4gel Johansson",
+                "Markus Bruun Jakobsen",
+                "Andreas Ahrenfeldt Laursen",
+                "Lasse Christensen",
+                "Jakob Juul",
+                "Kristian Pedersen",
+                "Poul S\u00f8nderup",
+                "Michael Buus",
+                "Marc Storm Andersen",
+                "Magnus Smed",
+                "Victor Birkemose"
+            ],
+            "fine": 26,
+            "match_result": {
+                "oester_sundby": 3,
+                "opponent": 2
+            }
         },
         {
             "season": "427115",
             "matchID": "895628",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "playerlist": [
+                "Mads Rantzau Nielsen",
+                "Jannik L\u00e4gel Johansson",
+                "Lasse Christensen",
+                "Jakob Juul",
+                "Kristian Pedersen",
+                "Poul S\u00f8nderup",
+                "Michael Buus",
+                "David Nielsen",
+                "Marc Storm Andersen",
+                "Magnus Smed",
+                "Jacob Winneche",
+                "Victor Birkemose"
+            ],
+            "fine": 40,
+            "match_result": {
+                "oester_sundby": 0,
+                "opponent": 2
+            }
         },
         {
             "season": "427115",
             "matchID": "895632",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "playerlist": [
+                "Mads Rantzau Nielsen",
+                "Jannik L\u00e4gel Johansson",
+                "Andreas Ahrenfeldt Laursen",
+                "Lasse Christensen",
+                "Kristian Pedersen",
+                "Poul S\u00f8nderup",
+                "Michael Buus",
+                "Ryan N\u00f8rgaard",
+                "William Marin Vedde",
+                "Magnus Smed",
+                "Jacob Winneche",
+                "Victor Birkemose"
+            ],
+            "fine": 12,
+            "match_result": {
+                "oester_sundby": 1,
+                "opponent": 0
+            }
         },
         {
             "season": "427115",
