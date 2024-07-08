@@ -3,9 +3,24 @@
         {
             "season": "427115",
             "matchID": "894708",
-            "playerlist": [],
-            "match_result": [],
-            "fine": ""
+            "playerlist": [
+                "Mads Rantzau Nielsen",
+                "Jannik L\u00e4gel Johansson",
+                "Andreas Ahrenfeldt Laursen",
+                "Lasse Christensen",
+                "Jakob Juul",
+                "Kristian Pedersen",
+                "Michael Buus",
+                "David Nielsen",
+                "Victor Lahn Pedersen",
+                "Ryan N\u00f8rgaard",
+                "Victor Birkemose"
+            ],
+            "match_result": {
+                "oester_sundby": 3,
+                "opponent": 1
+            },
+            "fine": 21
         },
         {
             "season": "427115",
@@ -263,16 +278,40 @@
         {
             "season": "427115",
             "matchID": "896193",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "playerlist": [
+                "Jannik L\u00e4gel Johansson",
+                "Lasse Christensen",
+                "Jakob Juul",
+                "Kristian Pedersen",
+                "Michael Buus",
+                "Ryan N\u00f8rgaard",
+                "William Marin Vedde",
+                "Marc Storm Andersen",
+                "Victor Birkemose"
+            ],
+            "fine": 45,
+            "match_result": {
+                "oester_sundby": 0,
+                "opponent": 3
+            }
         },
         {
             "season": "427115",
             "matchID": "896199",
-            "playerlist": [],
-            "fine": "",
-            "match_result": []
+            "playerlist": [
+                "Jakob Juul",
+                "Kristian Pedersen",
+                "Michael Buus",
+                "David Nielsen",
+                "Victor Lahn Pedersen",
+                "Jacob Winneche",
+                "Victor Birkemose"
+            ],
+            "fine": 55,
+            "match_result": {
+                "oester_sundby": 0,
+                "opponent": 5
+            }
         },
         {
             "season": "427339",
